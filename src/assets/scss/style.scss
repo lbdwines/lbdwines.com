@@ -1,0 +1,151 @@
+$visual-grid: true;
+$visual-grid-color: yellow;
+$visual-grid-index: front;
+$visual-grid-opacity: 0.2;
+
+//Base
+@import
+  "node_modules/normalize.scss/normalize",
+  "bourbon",
+  "base/base", // includes grid-settings, which must be imported before neat
+  "modules/grid-settings", //overrides bitters grid-settings
+  "neat";
+
+// Modules
+@import
+  "modules/vars",
+  "modules/visual-grid",
+  "modules/mixins",
+  "modules/layouts",
+  "modules/header",
+  "modules/home",
+  "modules/contact",
+  "modules/about",
+  "modules/projects",
+  "modules/project",
+  "modules/clients",
+  "modules/category",
+  "modules/blog",
+  "modules/articles",
+  "modules/footer",
+  "modules/flickity",
+  "modules/utilities-accessibility",
+  "modules/utilities-iframes",
+  "modules/utilities"
+;
+
+body {
+  font-family: "Open Sans", sans-serif;
+  @include media($s-up) {
+    // display: none;
+    // background-color: red;
+  }
+  @include media($l-up) {
+    // display: none;
+    // background-color: yellow;
+  }
+}
+
+body:before {
+  display: none;
+}
+
+body.grid:before {
+  display: block;
+}
+
+.load { // js fade in dynamically sized content
+  opacity: 0;
+}
+
+main {
+  @include media($s-up) {
+    margin-top: rem(24);
+  }
+  @include media($l-up) {
+    margin-top: rem(36);
+  }
+
+}
+
+// Typograpy
+
+h1 {
+  @include media($s-up) {
+    font-size: rem(24);
+    line-height: 1.4em;
+  }
+  @include media($m-up) {
+    font-size: rem(32);
+  }
+  @include media($l-up) {
+    font-size: rem(50);
+    line-height: 1.3em;
+  }
+  font-weight: 100;
+  margin: 0 0 1rem 0;
+}
+
+h2 {
+  @include media($s-up) {
+    font-size: rem(12);
+  }
+  @include media($m-up) {
+    font-size: 1rem;
+  }
+  @include media($xl-up) {
+    font-size: 1.1rem;
+  }
+  font-weight: 700;
+}
+h5 {
+  @include media($s-up) {
+    font-size: rem(14);
+  }
+  @include media($m-up) {
+    // font-size: 1.2rem;
+  }
+  font-weight: 400;
+}
+
+p {
+  @include media($s-up) {
+    line-height: 1.5em;
+    font-size: 1rem;
+  }
+  @include media($l-up) {
+    line-height: 1.6em;
+    font-size: rem(18);
+  }
+  font-weight: 100;
+}
+
+// gifted
+
+.gifted p a {
+  color: $myred;
+  text-decoration: none;
+}
+
+.gifted .hero {
+  margin-bottom: 1.5rem;
+}
+
+.gifted .hero a {
+  @include transition(all .2s ease);
+  color: $myred;
+  font-weight: 700;
+  &:hover {
+    color: $text;
+  }
+}
+
+.guide {
+  section.info a {
+    text-decoration: none;
+    color: $myred;
+  }
+}
+
+
+
