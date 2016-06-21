@@ -1,0 +1,345 @@
+// container
+@mixin container() {
+  @include media($s-up){
+    @include outer-container(); 
+  }
+  @include media($l-up){
+    @include outer-container($xl);
+  }
+}
+
+// border radius
+@mixin border-radius($radius:.25em) {
+  border-radius: $radius;
+}
+
+// hero 
+@mixin hero() { 
+  @include media($s-up) { 
+    @include span-columns(2);
+    padding: 1rem;
+    h1 {
+      margin-bottom: 1.5rem;
+    }
+  }
+  @include media($l-up) {
+    @include span-columns(4);
+    padding: 1.5rem;
+    h1 {
+      margin-bottom: 2.5rem;
+    }
+  }
+  background-color: #ededed; 
+  color: $text;
+  div.hero-inner { 
+    @include media($l-up) {
+      @include span-columns(3 of 4);
+    }
+    p {
+      margin-top: 0px;
+      span a {
+        @include transition(all .2s ease);
+        color: $myred;
+        font-weight: 700;
+        white-space: nowrap;
+        text-decoration: none;
+        &:hover {
+          color: $text;
+        } 
+      }
+    } 
+  }
+} 
+
+// blocks
+@mixin block() {
+  @include transition(all .2s ease);
+  display: inline-block;
+  position: relative;
+  background-color: #ededed;
+  @include media($s-up) {
+    padding: 1rem;
+  }
+  @include media($l-up) {
+    padding: 1.5rem;
+  }
+  font-size: rem(14);
+  margin-bottom: 1rem;
+  a {
+    text-decoration: none;
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    z-index: 1;
+    h2, h5 {
+      @include transition(all .2s ease);
+      opacity: 1;
+      margin: 0 0 .5rem 0;
+      text-decoration: none;
+      color: $text;
+      position: relative;
+      z-index: 1;
+    }
+    &:hover {
+      h2, h5 {
+        color: transparent;
+      }
+    }  
+  }
+  &:hover a {
+    h2, h5 {
+      @include transition(all .2s ease);
+      opacity: 1;
+      color: transparent;
+    }
+  }
+  &:before{
+    @include transition(all .2s ease);
+    position: absolute;
+    content:" ";
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    z-index:0;
+    background-color: rgba(230, 230, 230, 0.92);
+    // cursor: pointer;
+  }
+  &:hover:before{
+    @include transition(all .2s ease);
+    background-color: transparent;
+  }
+}
+
+@mixin block-index() {
+  @include transition(all .2s ease);
+  display: inline-block;
+  position: relative;
+  background-color: #ededed;
+  padding: 1rem;
+  font-size: rem(14);
+  margin-bottom: 1rem;
+  a {
+    text-decoration: none;
+    display: block;
+    width: 100%; 
+    height: 100%;
+    h2, h5 {
+      @include transition(all .2s ease);
+      margin: 0 0 .5rem 0;
+      text-decoration: none;
+      color: $text;
+      position: relative;
+      z-index: 1;
+    }
+    &:hover {
+      h2, h5 {
+        @include transition(all .2s ease);
+        color: transparent;
+      }
+    }  
+  }
+  &:before{
+    @include transition(all .2s ease);
+    position: absolute;
+    content:" ";
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    z-index:0;
+    background-color: rgba(230, 230, 230, 0.92);
+    cursor: pointer;
+  }
+  &:hover:before{
+    @include transition(all .2s ease);
+    background-color: transparent;
+  }
+}
+
+@mixin square() {
+  @include block();
+  @include media($s-up) {
+    @include span-columns(2 of 2); 
+  }
+  @include media($l-up) {
+    @include span-columns(1 of 3); 
+  }
+  &:after {
+    // responsive div that keeps aspect ratio
+    // http://stackoverflow.com/questions/12121090/responsively-change-div-size-keeping-aspect-ratio
+    padding-top: 100%;
+    display: block;
+    content: '';
+  }
+  .block-inner { 
+  // responsive div that keeps aspect ratio (see above)
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    @include media($s-up) {
+      padding: 1rem;
+    }
+    @include media($l-up) { 
+      padding: 1.5rem;
+    }
+  }
+}
+
+@mixin square-index() {
+  @include block();
+  @include media($s-up) {
+    @include span-columns(1 of 2); 
+  }
+  @include media($l-up) {
+    @include span-columns(1 of 4); 
+  }
+  &:after {
+    // responsive div that keeps aspect ratio
+    // http://stackoverflow.com/questions/12121090/responsively-change-div-size-keeping-aspect-ratio
+    padding-top: 100%;
+    display: block;
+    content: '';
+  }
+  .block-inner { 
+  // responsive div that keeps aspect ratio (see above)
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    @include media($s-up) {
+      padding: 1rem;
+    }
+    @include media($l-up) {
+      padding: 1.5rem;
+    }
+  }
+}
+
+@mixin tall() {
+  @include block();
+  @include media($s-up) {
+    @include span-columns(1 of 2);
+  }
+  @include media($l-up) {
+    @include span-columns(1 of 4);
+  }
+}
+
+@mixin wide() {
+  @include block();
+  height: rem(250);
+  @include media($s-up) {
+    @include span-columns(2 of 2); 
+  }
+  @include media($l-up) {
+    @include span-columns(2 of 3); 
+  }
+}
+
+
+@mixin wide-index() {
+  button { z-index: 2 }
+  
+  @include transition(all .2s ease);
+  display: inline-block;
+  position: relative;
+  background-color: #ededed;
+  @include media($s-up) {
+    padding: 1rem;
+  }
+  @include media($l-up) {
+    padding: 1.5rem;
+  }
+  font-size: rem(14);
+  margin-bottom: 1rem;
+  a {
+    text-decoration: none;
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    z-index: 1;
+    h2, h5 {
+      @include transition(all .2s ease);
+      opacity: 1;
+      margin: 0 0 .5rem 0;
+      text-decoration: none;
+      color: $text;
+      position: relative;
+      z-index: 1;
+    }
+    // &:hover {
+    //   h2, h5 {
+    //     color: transparent;
+    //   }
+    // }  
+  }
+  // &:hover a {
+  //   h2, h5 {
+  //     @include transition(all .2s ease);
+  //     opacity: 1;
+  //     color: transparent;
+  //   }
+  // }
+
+
+  height: rem(250);
+  @include media($s-up) {
+    @include span-columns(2 of 2); 
+    padding: 0;
+  }
+  @include media($l-up) {
+    @include span-columns(2 of 4); 
+  }
+  .gallery-cell { 
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+  }
+  // a {opacity: 1 !important;}
+  .text {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    @include media($s-up) {
+      padding: 1rem;
+    }
+    @include media($l-up) {
+      padding: 1.5rem;
+    }
+    // padding: 1rem 1rem .5rem 1rem;
+    a h2, a h5 {
+      display: block;
+      color: $text;
+    }
+    &:hover {
+      // background-color: transparent !important;
+      a h2, a h5 {
+        color: transparent; 
+      }
+    }
+    &:before{
+      @include transition(all .2s ease);
+      position: absolute;
+      content:" ";
+      top:0;
+      left:0;
+      width:100%;
+      height:100%;
+      z-index:1;
+      background-color: rgba(230, 230, 230, 0.92);
+      cursor: pointer;
+    }
+    &:hover:before{
+      @include transition(all .2s ease);
+      background-color: transparent;
+    }
+  }
+}

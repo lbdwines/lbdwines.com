@@ -1,0 +1,25 @@
+// Using this instead of bitters' grid-settings
+@import "neat-helpers";
+// Neat Overrides
+///////////////////////////////////////////////////////////////////////////////
+$column: em(300); // 1200/4
+// $gutter: em(8);
+$grid-columns: 2;
+// $max-width: calc(100% - 2rem);
+// $max-width: em(1000); // for desktop, mobile needs overriding styles
+
+// Neat Breakpoints
+///////////////////////////////////////////////////////////////////////////////
+
+$s: em(100);
+$m: em(500);
+$l: em(769);
+$xl: em(1200);
+$xxl: em(1600);
+
+$s-up: new-breakpoint(min-width $s 2);
+$m-up: new-breakpoint(min-width $m 2);
+$l-up: new-breakpoint(min-width $l 4);
+$xl-up: new-breakpoint(min-width $xl 4);
+$xxl: new-breakpoint(min-width $xxl 4);
+
