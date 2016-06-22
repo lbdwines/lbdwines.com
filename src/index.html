@@ -1,19 +1,66 @@
 ---
 layout: default
 class: home
-hero:
+top-image:
   image_path: https://placehold.it/1353x720/cccccc/cccccc?text=fpo
+favorites:
+  image_path: https://placehold.it/548x720/cccccc/cccccc?text=fpo
+middle-image:
+  image_path: https://placehold.it/1353x720/cccccc/cccccc?text=fpo
+quote:
+  image_path: https://placehold.it/318x270/cccccc/cccccc?text=fpo
+
 ---
 
 <main>
 
-<section class="image hero">
+<section class="top-image">
   <div class="container">
-    <img src="{{ page.hero.image_path }}" />
+    <img src="{{ page.top-image.image_path }}" />
     <div class="headline">
       <p class="top">Latest</p>
       <p class="bottom">Obsession</p>
     </div>
+  </div>
+</section>
+
+<section class="text-image favorites">
+  <div class="container">
+    <div class="text">
+      <div class="wrapper">
+        <h4>all your favorites</h4>
+        <h3>Anything but basic.</h3>
+        <p class="graph">Good taste is your call. It's something you wear proudly and pour boldly. It's your own personal flavor. And it looks amazing.</p>
+        <button class="more">Learn More</button>
+      </div>
+    </div>
+    <div class="image"><img src="{{ page.favorites.image_path }}" alt=""></div>
+  </div>
+</section>
+
+<section class="middle-image">
+  <div class="container">
+    <img src="{{ page.middle-image.image_path }}" />
+  </div>
+</section>
+
+<section class="text-image winemaker">
+  <div class="container">
+    <div class="image"><img src="{{ page.favorites.image_path }}" alt=""></div>
+    <div class="text">
+      <div class="wrapper">
+        <h4>behind the scenes</h4>
+        <h3>The Winemaker</h3>
+        <p class="graph">From harvesting and crushing to blending and aging, Margaret Leonardi makes sure every batch, every bottle, every sip of LBD looks and tastes its absolute best.</p>
+        <button class="more">Learn More</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="quote">
+  <div class="container">
+    <img src="{{page.quote.image_path}}" alt="">
   </div>
 </section>
 

@@ -1,6 +1,6 @@
 .home {
 
-  section.hero {
+  section.top-image {
     @include media($l-up) {
       position: relative;
       margin-top: 45px;
@@ -29,5 +29,88 @@
       }
     }
   }
+
+  section.favorites {
+    @include media($l-up){
+      margin-top: 135px;
+      .text {
+        @include span-columns(5);
+        @include shift(1);
+        height: 720px; // TODO: make dynamic with js (for vertical-align)
+        .wrapper {
+          @include span-columns(3 of 5);
+          @include vertical-align;
+          h3 {
+            margin-top: .75rem;
+          }
+          p {
+            line-height: 1.7;
+          }
+          button {
+            margin-top: .5rem;
+            padding: 1.3em 1em;
+            width: 230px;
+            background-color: #eed5d8;
+            border-radius: 0px;
+          }
+        }
+      }
+      .image {
+        @include span-columns(5);
+      }
+    }
+  }
+
+  section.middle-image {
+    @include media($l-up) {
+      position: relative;
+      margin-top: 135px;
+    }
+  }
+
+  section.winemaker {
+    @include media($l-up){
+      margin-top: 135px;
+      .text {
+        @include span-columns(4);
+        @include shift(1);
+        height: 720px; // TODO: make dynamic with js (for vertical-align)
+        .wrapper {
+          @include span-columns(3 of 4);
+          @include vertical-align;
+          h3 {
+            margin-top: .75rem;
+          }
+          p {
+            line-height: 1.7;
+          }
+          button {
+            margin-top: .5rem;
+            padding: 1.3em 1em;
+            width: 230px;
+            background-color: #eed5d8;
+            border-radius: 0px;
+          }
+        }
+      }
+      .image {
+        @include span-columns(5);
+        @include shift(2);
+      }
+    }
+  }
+
+  section.quote {
+    @include media($l-up){
+      margin-top: 89px;
+      @include span-columns(3);
+      @include shift(6);
+      img {
+        max-width: 100%;
+      }
+    }
+  }
+
+
 
 }
