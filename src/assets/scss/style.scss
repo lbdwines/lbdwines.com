@@ -13,18 +13,28 @@ $visual-grid-opacity: 0.2;
 
 // Modules
 @import
-  "MyFontsWebfontsKit",
   "modules/fonts",
-  "modules/vars",
+  "modules/fonts",
   "modules/visual-grid",
   "modules/mixins",
   "modules/layouts",
   "modules/header",
-  // "modules/home",
+  "modules/common",
   "modules/footer",
   "modules/flickity",
   "modules/utilities"
 ;
+
+.bodoni-italic { font-family: ITCBodoni72Com-BookItalic; }
+.bodoni-bold { font-family: ITCBodoni72Com-Bold; }
+.avenir-medium { font-family: AvenirLTStd-Medium; }
+.avenir { font-family: AvenirLTStd-Book; }
+.avenir-bold { font-family: AvenirLTStd-Black; }
+
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
 
 body:before {
   display: none;

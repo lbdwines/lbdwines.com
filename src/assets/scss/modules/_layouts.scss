@@ -7,9 +7,9 @@
 // $m: em(500);
 // $l: em(769);
 // $xl: em(1200);
-// $xxl: em(1600); 
+// $xxl: em(1600);
 
-main, header, footer {
+main, footer {
   text-align: left;
   @include container();
   @include media($s-up) {
