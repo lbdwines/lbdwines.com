@@ -26,7 +26,13 @@ $visual-grid-opacity: 0.2;
   "modules/utilities"
 ;
 
+body:before {
+  display: none;
+}
 
+body.grid:before {
+  display: block;
+}
 
 
 
