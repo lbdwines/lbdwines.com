@@ -14,11 +14,11 @@ $visual-grid-opacity: 0.2;
 // Modules
 @import
   "modules/fonts",
-  "modules/fonts",
   "modules/visual-grid",
   "modules/mixins",
   "modules/layouts",
   "modules/header",
+  "modules/home",
   "modules/common",
   "modules/footer",
   "modules/flickity",
@@ -42,6 +42,10 @@ body:before {
 
 body.grid:before {
   display: block;
+}
+
+main {
+  margin-top: 45px;
 }
 
 

@@ -1,0 +1,33 @@
+.home {
+
+  section.hero {
+    @include media($l-up) {
+      position: relative;
+      margin-top: 45px;
+    }
+    .headline {
+      position: absolute;
+      z-index: 100;
+      // top: 100px;
+      left: 17%;
+      text-align: center;
+      padding-bottom: .65rem;
+      border-bottom: 8px solid #dbb7bb;
+      @include center(y);
+      .top {
+        font-family: ITCBodoni72Com-BookItalic;
+        font-size: 42px;
+        letter-spacing: 2px;
+        margin: 0px !important;
+      }
+      .bottom {
+        font-family: AvenirLTStd-Book;
+        font-size: 30px;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+        margin: 0px !important;
+      }
+    }
+  }
+
+}
