@@ -2,6 +2,10 @@
   @include media($l-up){
     margin-top: 135px;
   }
+  a {
+    color: #313131;
+    text-decoration: none;
+  }
   .search {
     @include media($l-up){
       @include span-columns(3);
@@ -55,6 +59,9 @@
         margin-top: 0px;
         margin-bottom: 1rem;
         text-align: left;
+      }
+      i {
+        margin-right: 1rem;
       }
     }
   }
