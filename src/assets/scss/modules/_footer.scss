@@ -59,3 +59,53 @@
     }
   }
 }
+
+footer {
+  margin-top: 50px;
+  background: #313131;
+  font-family: AvenirLTStd-Book;
+  letter-spacing: 2px;
+  color: white;
+  .copyright {
+    @include media($l-up){
+      display: inline-block;
+      height: 45px;
+      float: left;
+      p {
+        font-size: 10px;
+        color: white;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        margin: 0px;
+        margin-top: 2px;
+        @include vertical-align;
+      }
+    }
+  }
+  .terms, .supply {
+    @include media($l-up){
+      display: inline-block;
+      height: 45px;
+      margin-left: 3rem;
+      float: right;
+      p {
+        margin: 0px;
+        margin-top: 2px;
+        font-size: 10px;
+        line-height: 10px;
+        @include vertical-align;
+        a {
+          color: white;
+          text-transform: uppercase;
+          letter-spacing: 2px;
+          text-decoration: none;
+        }
+      }
+    }
+  }
+
+
+
+}
+
+

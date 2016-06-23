@@ -52,6 +52,10 @@
             width: 230px;
             background-color: #eed5d8;
             border-radius: 0px;
+            &:hover {
+              opacity: .8;
+              color: #313131;
+            }
           }
         }
       }

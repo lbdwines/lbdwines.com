@@ -146,12 +146,13 @@ header.navigation {
     }
 
     a {
+      position: relative;
       color: $navigation-color;
       display: inline-block;
       text-decoration: none;
 
       @include media ($horizontal-bar-mode) {
-        padding-right: 2rem;
+        margin-right: 2rem;
       }
 
       &:focus,
@@ -159,6 +160,18 @@ header.navigation {
         color: $navigation-color-hover;
       }
     }
+
+    a:after {
+      content: '';
+      display: block;
+      background: #dbb7bb;
+      height: 2px;
+      // max-width: 35px;
+      width: 100%;
+      margin: 0 auto;
+      margin-top: -1rem;
+    }
+
   }
 
   .active-nav-item a {
