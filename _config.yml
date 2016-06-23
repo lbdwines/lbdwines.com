@@ -1,8 +1,22 @@
 # Title, decription, tagline and URL for your site
 # Can be used in your theme by calling 'site.title' and so on
 title: Little Black Dress Wines
-description: 
+description:
 url: http://ldbwines.com
+
+collections:
+  wines:
+    output: true
+    permalink: /wines/:slug/
+
+defaults:
+  -
+    scope:
+      path: ""
+      type: wines
+    values:
+      class: wine
+      layout: default
 
 # Used so Jekyll outputs the site correctly so Gulp can do what it wants
 source: .tmp/src
@@ -14,9 +28,9 @@ exclude: ['assets']
 # NOTE: Don't use @ in front of your Twitter username
 author:
   name: Ryan
-  email: 
-  uri: 
-  bio: 
+  email:
+  uri:
+  bio:
   twitter:
   github:
 

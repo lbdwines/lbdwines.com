@@ -9,7 +9,12 @@ middle-image:
   image_path: https://placehold.it/1353x720/cccccc/cccccc?text=fpo
 quote:
   image_path: https://placehold.it/318x270/cccccc/cccccc?text=fpo
-
+wines:
+  - chardonnay
+  - pinot-noir
+  - cabernet-sauvignon
+bottom-image:
+  image_path: https://placehold.it/1353x720/cccccc/cccccc?text=fpo
 ---
 
 <main>
@@ -60,9 +65,43 @@ quote:
 
 <section class="quote">
   <div class="container">
-    <img src="{{page.quote.image_path}}" alt="">
+    <div class="quote-wrapper">
+      <img src="{{page.quote.image_path}}" alt="">
+    </div>
   </div>
 </section>
+
+<section class="products">
+  <div class="container">
+    <h3>Top Sellers</h3>
+    {% for seller in page.wines %}
+      {% for item in site.wines %}
+        {% if seller == item.slug %}
+        <div class="product">
+          <img src="{{item.image_path}}" alt="">
+          <h2>{{item.title}}</h2>
+          <h5>{{item.origin}}</h5>
+        </div>
+        {% endif %}
+      {% endfor %}
+    {% endfor %}
+  </div>
+</section>
+
+<section class="cta">
+  <div class="container">
+    <div class="buttons">
+      <button class="all">view all</button><button class="store">find a store</button>
+    </div>
+  </div>
+</section>
+
+<section class="bottom-image">
+  <div class="container">
+    <img src="{{ page.bottom-image.image_path }}" />
+  </div>
+</section>
+
 
 </main>
 
