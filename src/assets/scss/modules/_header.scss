@@ -146,6 +146,7 @@ header.navigation {
     }
 
     a {
+      @include transition(all .2s ease);
       position: relative;
       color: $navigation-color;
       display: inline-block;
@@ -161,15 +162,20 @@ header.navigation {
       }
     }
 
-    // a:after {
-    //   content: '';
-    //   display: block;
-    //   background: #dbb7bb;
-    //   height: 2px;
-    //   width: 100%;
-    //   margin: 0 auto;
-    //   margin-top: -1rem;
-    // }
+    a:hover {
+      @include transition(all .2s ease);
+    }
+
+    a:hover::after {
+      @include transition(all .2s ease);
+      content: '';
+      display: block;
+      background: #dbb7bb;
+      height: 2px;
+      width: 100%;
+      margin: 0 auto;
+      margin-top: -1rem;
+    }
 
   }
 
