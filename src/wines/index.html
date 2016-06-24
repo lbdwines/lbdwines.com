@@ -29,6 +29,7 @@ first_image_path: https://placehold.it/663x720/cccccc/cccccc?text=fpo
 
   {% if grid1 %}
   <section class="products grid1">
+    <div class="container">
     {% if wines[0] %}
       <div class="product">
         <img src="{{wines[0].image_path}}" alt="">
@@ -58,11 +59,13 @@ first_image_path: https://placehold.it/663x720/cccccc/cccccc?text=fpo
       </div>
     {% endif %}
     <img class="breakout" src="{{page.first_image_path}}" alt="">
+    </div>
   </section>
   {% endif %}
 
   {% if grid2 %}
   <section class="products grid2">
+  <div class="container">
     {% if wines[4] %}
       <div class="product">
         <img src="{{wines[4].image_path}}" alt="">
@@ -92,7 +95,16 @@ first_image_path: https://placehold.it/663x720/cccccc/cccccc?text=fpo
         <h5>{{wines[7].origin}}</h5>
       </div>
     {% endif %}
+    </div>
   </section>
   {% endif %}
+
+  <section class="cta">
+    <div class="container">
+      <div class="buttons">
+        <a href="http://locator.banfi-hq.com/WineLocator/default.aspx?BCode=855"><button class="store">find a store</button></a>
+      </div>
+    </div>
+  </section>
 
 </main>
