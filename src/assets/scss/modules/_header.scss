@@ -25,6 +25,10 @@ header.navigation {
   width: 100%;
   z-index: 999;
 
+  position: fixed;
+  top: 0;
+  left: 0;
+
   .navigation-wrapper {
     @include clearfix;
     position: relative;
@@ -34,8 +38,8 @@ header.navigation {
   .logo {
     float: left;
     height: $navigation-height;
-    padding-left: $navigation-padding;
-    padding-left: 2.5rem;
+    // padding-left: $navigation-padding;
+    // padding-left: 2.5rem;
 
     img {
       width: 223px;
@@ -80,6 +84,7 @@ header.navigation {
   }
 
   div.store {
+    @include transition(all .2s ease);
     @include media ($horizontal-bar-mode) {
       float: right;
       height: $navigation-height;
@@ -98,6 +103,10 @@ header.navigation {
         width: 154px;
         border: 2px solid #dbb7bb;
       }
+    }
+    &:hover {
+      @include transition(all .2s ease);
+      opacity: .7;
     }
   }
 
@@ -124,6 +133,7 @@ header.navigation {
   // The nav items
 
   ul li.nav-link {
+    @include transition(all .2s ease);@include transition(all .2s ease);
     font-family: AvenirLTStd-Medium;
     font-size: 12px;
     letter-spacing: 2px;
@@ -136,6 +146,9 @@ header.navigation {
     text-align: right;
     width: 100%;
     z-index: 9999;
+    margin-right: 2rem;
+    padding-bottom: 3px;
+    border-bottom: 2px solid transparent;
 
     @include media ($horizontal-bar-mode) {
       background: transparent;
@@ -143,6 +156,9 @@ header.navigation {
       line-height: $navigation-height;
       text-decoration: none;
       width: auto;
+      &:hover {
+        border-bottom: 2px solid #ffc0cb;
+      }
     }
 
     a {
@@ -153,7 +169,7 @@ header.navigation {
       text-decoration: none;
 
       @include media ($horizontal-bar-mode) {
-        margin-right: 2rem;
+        // margin-right: 2rem;
       }
 
       &:focus,
@@ -166,16 +182,16 @@ header.navigation {
       @include transition(all .2s ease);
     }
 
-    a:hover::after {
-      @include transition(all .2s ease);
-      content: '';
-      display: block;
-      background: #dbb7bb;
-      height: 2px;
-      width: 100%;
-      margin: 0 auto;
-      margin-top: -1rem;
-    }
+    // a:hover::after {
+    //   @include transition(all .2s ease);
+    //   content: '';
+    //   display: block;
+    //   background: #dbb7bb;
+    //   height: 2px;
+    //   width: 100%;
+    //   margin: 0 auto;
+    //   margin-top: -1rem;
+    // }
 
   }
 

@@ -47,13 +47,14 @@
             line-height: 1.7;
           }
           button {
+            @include transition(all .2s ease);
             margin-top: .5rem;
             padding: 1.3em 1em;
             width: 230px;
             background-color: #eed5d8;
             border-radius: 0px;
             &:hover {
-              opacity: .8;
+              opacity: .7;
               color: #313131;
             }
           }
@@ -89,13 +90,14 @@
             line-height: 1.7;
           }
           button {
+            @include transition(all .2s ease);
             margin-top: .5rem;
             padding: 1.3em 1em;
             width: 230px;
             background-color: #eed5d8;
             border-radius: 0px;
             &:hover {
-              opacity: .8;
+              opacity: .7;
               color: #313131;
             }
           }
@@ -149,6 +151,7 @@
     @include media($l-up){
       margin-bottom: 135px;
       .buttons {
+        @include transition(all .2s ease);
         @include span-columns(6);
         @include shift(3);
         text-align: center;
@@ -161,7 +164,7 @@
           background-color: #eed5d8;
           border-radius: 0px;
           &:hover {
-            opacity: .8;
+            opacity: .7;
             color: #313131;
           }
         }
@@ -175,7 +178,7 @@
           border: 3px solid #dbb7bb;
           border-radius: 0px;
           &:hover {
-            opacity: .8;
+            opacity: .7;
             color: #313131;
           }
         }
