@@ -24,6 +24,12 @@ main {
 
 header {
   padding-bottom: 0;
+  @include media($s-up) {
+    @include pad(0 1rem);
+  }
+  @include media($xl-up) {
+    @include pad(0);
+  }
 }
 
 main {
