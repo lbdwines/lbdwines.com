@@ -1,0 +1,34 @@
+<script>
+
+  var windowWidth = $(window).width();
+
+  $(function() {
+    // on load
+    var breakouts = $('.breakout');
+    var breakoutHeight = breakouts.eq(0).height();
+    var productHeight = $('.product').first().height();
+    var pad = (breakoutHeight - productHeight) / 2;
+
+    breakouts.eq(0).prev().css({"margin-bottom": "0px", "padding-top": pad});
+    breakouts.eq(1).next().css({"margin-bottom": "0px", "padding-top": pad});
+
+    var main = $('main');
+    setTimeout(function(){
+      $(main).fadeIn().removeClass('load').addClass('loaded');
+    }, 250);
+
+    // on resize
+    window.onresize = function(){
+      // actual resize? http://tinyurl.com/qaoajzu
+      if ($(window).width() != windowWidth) {
+        var main = $('main');
+        $(main).removeClass('loaded').addClass('load');
+        setTimeout(function(){
+          $(main).fadeIn().removeClass('load').addClass('loaded');
+        }, 250);
+      }
+
+    }
+  });
+
+</script>

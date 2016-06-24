@@ -19,6 +19,7 @@ $visual-grid-opacity: 0.2;
   "modules/layouts",
   "modules/header",
   "modules/home",
+  "modules/wines",
   "modules/common",
   "modules/footer",
   "modules/flickity",
@@ -30,6 +31,14 @@ $visual-grid-opacity: 0.2;
 .avenir-medium { font-family: AvenirLTStd-Medium; }
 .avenir { font-family: AvenirLTStd-Book; }
 .avenir-bold { font-family: AvenirLTStd-Black; }
+
+html {
+  margin-top: 54px;
+}
+
+.load { // js fade in dynamically sized content
+  opacity: 0;
+}
 
 body {
   -webkit-font-smoothing: antialiased;
@@ -45,9 +54,8 @@ body.grid:before {
   display: block;
 }
 
-main {
-  margin-top: 90px;
-}
+
+
 
 
 

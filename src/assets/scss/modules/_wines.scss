@@ -1,0 +1,72 @@
+.wines {
+
+  section.headline {
+    margin-top: 105px;
+    text-align: center;
+    h1 {
+      display: inline-block;
+      margin-top: 0px;
+      margin-bottom: 0;
+      padding-bottom: 2px;
+      border-bottom: 6px solid #edd5d8;
+    }
+    p {
+      margin-top: 1.8rem;
+    }
+  }
+
+  section.products {
+    @include media($l-up){
+      margin-top: 74px;
+    }
+    h3 {
+      text-align: center;
+      margin-bottom: 72px;
+    }
+    h2 {
+      margin-top: 22px;
+      margin-bottom: 0px;
+    }
+    h5 {
+      margin-top: 12px !important;
+      margin-bottom: 0px;
+    }
+    .product {
+      @include span-columns(4);
+      margin-bottom: 90px;
+      img {
+        display: block;
+      }
+    }
+  }
+
+  .grid1 {
+    .product:nth-child(3n) {
+      margin-right: 0;
+    }
+    img.breakout {
+      margin-bottom: 115px;
+    }
+  }
+
+  .grid2 {
+    .product:nth-child(3n) {
+      margin-right: 0;
+    }
+    .product:last-child {
+      @include shift(1);
+    }
+    img.breakout {
+      margin-bottom: 115px;
+    }
+  }
+
+  img.breakout {
+    @include media($l-up){
+      @include span-columns(6);
+      @include shift(1);
+    }
+  }
+
+
+}
