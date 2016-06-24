@@ -6,11 +6,12 @@
     <a href="" class="navigation-menu-button" id="js-mobile-menu">MENU</a>
     <div class="store"><a target="_blank" href="http://locator.banfi-hq.com/WineLocator/default.aspx?BCode=855">find a store</a></div><nav role="navigation">
       <ul id="js-navigation-menu" class="navigation-menu show">
-        <li class="nav-link"><a href="/wines">wines</a></li>
-        <li class="nav-link"><a href="/about">about</a></li>
-        <li class="nav-link"><a href="/partners">partners</a></li>
-        <li class="nav-link"><a href="/contact">contact</a></li>
+        <li class="nav-link{% if page.slug == 'wines' %} active{% endif %}"><a href="/wines">wines</a></li>
+        <li class="nav-link{% if page.slug == 'about' %} active{% endif %}"><a href="/about">about</a></li>
+        <li class="nav-link{% if page.slug == 'partners' %} active{% endif %}"><a href="/partners">partners</a></li>
+        <li class="nav-link{% if page.slug == 'contact' %} active{% endif %}"><a href="/contact">contact</a></li>
       </ul>
     </nav>
   </div>
 </header>
+

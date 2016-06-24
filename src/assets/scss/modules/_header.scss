@@ -149,6 +149,9 @@ header.navigation {
     margin-right: 2rem;
     padding-bottom: 3px;
     border-bottom: 2px solid transparent;
+    &.active {
+      border-bottom: 2px solid #ffc0cb;
+    }
 
     @include media ($horizontal-bar-mode) {
       background: transparent;
