@@ -1,0 +1,28 @@
+<script>
+
+  var windowWidth = $(window).width();
+
+  $(function() {
+    // on load
+
+    var main = $('main');
+    setTimeout(function(){
+      $(main).fadeIn().removeClass('load').addClass('loaded');
+    }, 250);
+
+
+    // on resize
+    window.onresize = function(){
+      // actual resize? http://tinyurl.com/qaoajzu
+      if ($(window).width() != windowWidth) {
+        var main = $('main');
+        $(main).removeClass('loaded').addClass('load');
+        setTimeout(function(){
+          $(main).fadeIn().removeClass('load').addClass('loaded');
+        }, 250);
+      }
+    }
+
+  });
+
+</script>

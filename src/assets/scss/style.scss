@@ -24,6 +24,8 @@ $visual-grid-opacity: 0.2;
   "modules/wines",
   "modules/wine",
   "modules/about",
+  "modules/supply",
+  // "modules/terms",
   "modules/common",
   "modules/footer",
   "modules/flickity",
@@ -36,15 +38,12 @@ $visual-grid-opacity: 0.2;
 .avenir { font-family: AvenirLTStd-Book; }
 .avenir-bold { font-family: AvenirLTStd-Black; }
 
-html {
-  margin-top: 54px;
-}
-
 .load { // js fade in dynamically sized content
   opacity: 0;
 }
 
 body {
+  margin-top: 54px;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   font-family: $base-font-family;
