@@ -20,6 +20,9 @@
 
   </body>
 
+  {% if page.class == 'home' %}
+    {% include scripts_home.html %}
+  {% endif %}
   {% if page.class == 'wines' %}
     {% include scripts_wines.html %}
   {% endif %}
