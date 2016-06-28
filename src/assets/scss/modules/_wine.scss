@@ -74,4 +74,28 @@
     }
   }
 
+  section.cta {
+    @include media($l-up){
+      // margin-bottom: 135px;
+      .buttons {
+        @include transition(all .2s ease);
+        text-align: center;
+        .store {
+          margin-top: .5rem;
+          // margin-left: 27px;
+          // margin-right: 27px;
+          padding: 1em 1em;
+          width: 230px;
+          background-color: transparent;
+          border: 3px solid #dbb7bb;
+          border-radius: 0px;
+          &:hover {
+            opacity: .7;
+            color: #313131;
+          }
+        }
+      }
+    }
+  }
+
 }

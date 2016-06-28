@@ -44,11 +44,21 @@ layout: default
       <h2>All Wines</h2>
       {% for wine in wines %}
       <div class="product">
+        <a href="{{ wine.url }}">
         <img src="{{wine.image_path}}" alt="">
+        </a>
         <h2>{{wine.title}}</h2>
         <h5>{{wine.origin}}</h5>
       </div>
       {% endfor %}
+    </div>
+  </section>
+
+  <section class="cta">
+    <div class="container">
+      <div class="buttons">
+        <a href="http://locator.banfi-hq.com/WineLocator/default.aspx?BCode=855"><button class="store">find a store</button></a>
+      </div>
     </div>
   </section>
 
