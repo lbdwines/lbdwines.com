@@ -35,7 +35,21 @@ layout: default
         <img src="{{ page.image_path }}" alt="">
       </div>
     </div>
+  </section>
 
+{% assign wines = site.wines %}
+{% assign wines = wines|sort('sort') %}
+  <section class="all">
+    <div class="container">
+      <h2>All Wines</h2>
+      {% for wine in wines %}
+      <div class="product">
+        <img src="{{wine.image_path}}" alt="">
+        <h2>{{wine.title}}</h2>
+        <h5>{{wine.origin}}</h5>
+      </div>
+      {% endfor %}
+    </div>
   </section>
 
 </main>

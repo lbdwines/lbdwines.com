@@ -7,7 +7,7 @@ ph: 3.5
 residual_sugar: 1.2 g/mL
 alcohol: 13.5% A.B.V
 varietal_breakdown: 78% Merlot, 4% Petite Sirah, 18% Other Complimentary Red Varietals
-image_path: https://placehold.it/433x548/cccccc/cccccc?text=fpo
+image_path: https://placehold.it/639x809/cccccc/cccccc?text=fpo
 sort: 4
 purchase_link:
 ---
