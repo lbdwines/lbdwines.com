@@ -2,6 +2,8 @@
 layout: default
 class: wines
 first_image_path: https://placehold.it/663x720/cccccc/cccccc?text=fpo
+second_image_path: https://placehold.it/663x720/cccccc/cccccc?text=fpo
+
 ---
 
 {% assign wines = site.wines %}
@@ -101,7 +103,7 @@ first_image_path: https://placehold.it/663x720/cccccc/cccccc?text=fpo
         <h5>{{wines[6].origin}}</h5>
       </div>
     {% endif %}
-    <img class="breakout" src="{{page.first_image_path}}" alt="">
+    <img class="breakout" src="{{page.second_image_path}}" alt="">
     {% if wines[7] %}
       <div class="product">
         <a href="{{ wines[7].url }}">
