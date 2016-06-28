@@ -3,7 +3,7 @@
   section.top-image {
     @include media($l-up) {
       position: relative;
-      margin-top: 45px;
+      padding-top: 45px;
     }
     .headline {
       position: absolute;
