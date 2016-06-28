@@ -1,0 +1,59 @@
+.partners {
+
+  section.headline {
+    @include media($l-up){
+      @include span-columns(6);
+      @include shift(3);
+    }
+    margin-top: 108px;
+    text-align: center;
+    h1 {
+      display: inline-block;
+      margin-top: 0px;
+      margin-bottom: 1.8rem;
+      padding-bottom: 2px;
+      border-bottom: 6px solid #edd5d8;
+    }
+    p {
+      margin-top: 0px;
+      line-height: 1.5;
+    }
+  }
+
+  section.partners {
+    clear: both;
+    @include media($l-up){
+      padding-top: 90px;
+    }
+    .partner {
+      @include span-columns(4);
+      margin-bottom: 90px;
+      img {
+        display: block;
+        margin-bottom: 45px;
+      }
+      a img:hover {
+        opacity: .7;
+      }
+      h4 {
+
+      }
+      p {
+        @include span-columns(3 of 4);
+        line-height: 1.5;
+        margin-top: 1em;
+        margin-bottom: 1em;
+      }
+      p a {
+        font-weight: bold;
+        text-decoration: underline;
+        color: #313131;
+        letter-spacing: 1px;
+      }
+    }
+    .partner:nth-of-type(3n) {
+      margin-right: 0px;
+    }
+  }
+
+}

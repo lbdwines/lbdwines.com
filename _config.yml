@@ -8,6 +8,8 @@ collections:
   wines:
     output: true
     permalink: /wines/:slug/
+  partners:
+    output: false
 
 defaults:
   -
