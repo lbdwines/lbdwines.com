@@ -1,0 +1,41 @@
+---
+layout: default
+---
+
+<main class="load">
+
+  <section class="featured">
+    <div class="container">
+      <div class="info">
+        <div class="name">
+          <h3>{{ page.name }}</h3>
+          <h4>{{ page.origin }}</h4>
+        </div>
+        <div class="description">
+          <h4>description</h4>
+          <div class="wrapper">
+            {{ page.content }}
+          </div>
+        </div>
+        <div class="notes">
+          <h4>technical notes</h4>
+          <p>Total Acidity: {{ page.total_acidity }}</p>
+          <p>pH: {{ page.ph }}</p>
+          <p>Residual Sugar: {{ page.residual_sugar }}</p>
+          <p>Alocohol: {{ page.alcohol }}</p>
+        </div>
+        <div class="varietal">
+          <h4>varietal breakdown</h4>
+          <div class="wrapper">
+            <p>{{ page.varietal_breakdown }}</p>
+          </div>
+        </div>
+      </div>
+      <div class="image">
+        <img src="{{ page.image_path }}" alt="">
+      </div>
+    </div>
+
+  </section>
+
+</main>

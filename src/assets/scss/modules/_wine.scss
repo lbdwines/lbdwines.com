@@ -1,0 +1,49 @@
+.wine {
+
+  section.featured {
+    @include media($l-up){
+      margin-top: 108px;
+      .info {
+        @include span-columns(5);
+        .name, .description, .notes, .varietal {
+          @include span-columns(5 of 5);
+          padding-top: 1rem;
+          padding-bottom: 1rem;
+          border-bottom: 2px solid #f2f2f2;
+        }
+        .name {
+          padding-bottom: 2rem;
+          h3 {
+            line-height: 1.2;
+          }
+          h4 {
+            margin-top: .8rem;
+          }
+        }
+        .description {
+          p {
+            line-height: 1.5;
+          }
+        }
+        .notes {
+          h4 {
+            margin-bottom: 1rem;
+          }
+          p {
+            margin: 0px;
+            line-height: 1.5;
+          }
+        }
+        .wrapper {
+          @include span-columns(4 of 5);
+        }
+      }
+      .image  {
+        @include span-columns(6);
+        @include shift(1);
+        text-align: right;
+      }
+    }
+  }
+
+}

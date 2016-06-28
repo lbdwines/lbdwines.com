@@ -16,7 +16,7 @@ defaults:
       type: wines
     values:
       class: wine
-      layout: default
+      layout: wine
 
 # Used so Jekyll outputs the site correctly so Gulp can do what it wants
 source: .tmp/src
