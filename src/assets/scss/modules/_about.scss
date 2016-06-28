@@ -46,7 +46,7 @@
         @include span-columns(4);
         @include shift(1);
         .wrapper {
-          @include span-columns(3 of 4);
+          @include span-columns(4 of 4);
           @include vertical-align;
           h3 {
             margin-top: .75rem;
@@ -72,6 +72,26 @@
         @include span-columns(5);
         @include shift();
       }
+    }
+  }
+
+  section.quote {
+    @include media($l-up){
+      margin-top: 90px;
+      .quote-wrapper {
+        @include span-columns(3);
+        @include shift(6);
+        img {
+          max-width: 100%;
+        }
+      }
+    }
+  }
+
+  section.bottom-image {
+    @include media($l-up) {
+      position: relative;
+      margin-top: 135px;
     }
   }
 

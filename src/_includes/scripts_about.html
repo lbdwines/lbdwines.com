@@ -15,7 +15,17 @@
     text.css('height', sectionHeight);
 
 
-
+    // on resize
+    window.onresize = function(){
+      // actual resize? http://tinyurl.com/qaoajzu
+      if ($(window).width() != windowWidth) {
+        var main = $('main');
+        $(main).removeClass('loaded').addClass('load');
+        setTimeout(function(){
+          $(main).fadeIn().removeClass('load').addClass('loaded');
+        }, 250);
+      }
+    }
 
   });
 
