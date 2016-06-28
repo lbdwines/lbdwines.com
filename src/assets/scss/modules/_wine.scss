@@ -68,6 +68,13 @@
       h2 {
         text-align: center;
       }
+      a {
+        @include transition(all .2s ease);
+      }
+      a img:hover {
+        @include transition(all .2s ease);
+        opacity: .7;
+      }
     }
     .product:nth-of-type(3n) {
       margin-right: 0;
