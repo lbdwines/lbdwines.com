@@ -78,7 +78,9 @@ bottom-image:
       {% for item in site.wines %}
         {% if seller == item.slug %}
         <div class="product">
+          <a href="{{ item.url }}">
           <img src="{{item.image_path}}" alt="">
+          </a>
           <h2>{{item.title}}</h2>
           <h5>{{item.origin}}</h5>
         </div>

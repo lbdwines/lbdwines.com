@@ -144,6 +144,13 @@
       img {
         display: block;
       }
+      a {
+        @include transition(all .2s ease);
+      }
+      a img:hover {
+        @include transition(all .2s ease);
+        opacity: .7;
+      }
     }
   }
 
