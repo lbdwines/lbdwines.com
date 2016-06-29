@@ -12,10 +12,6 @@
     breakouts.eq(0).prev().css({"margin-bottom": "0px", "padding-top": pad});
     breakouts.eq(1).next().css({"margin-bottom": "0px", "padding-top": pad});
 
-    var main = $('main');
-    setTimeout(function(){
-      $(main).fadeIn().removeClass('load').addClass('loaded');
-    }, 250);
 
     // on resize
     window.onresize = function(){

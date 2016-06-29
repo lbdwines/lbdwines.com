@@ -5,11 +5,6 @@
   $(function() {
     // on load
 
-    var main = $('main');
-    setTimeout(function(){
-      $(main).fadeIn().removeClass('load').addClass('loaded');
-    }, 250);
-
     var sectionHeight = $('section.winemaker').height();
     var text = $('section.winemaker .text');
     text.css('height', sectionHeight);

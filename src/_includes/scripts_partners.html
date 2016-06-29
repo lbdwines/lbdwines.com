@@ -5,13 +5,6 @@
   $(function() {
     // on load
 
-    var page = $('main, footer, .footer');
-    setTimeout(function(){
-      page.fadeIn(1000).promise().done(function(){
-        $(this).removeClass('load').addClass('loaded');
-      });
-    }, 250);
-
 
     // on resize
     window.onresize = function(){
