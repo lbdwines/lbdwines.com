@@ -21,20 +21,27 @@ enquire.register("screen and (max-width: 768px)", {
 
         // do layout calculations
 
-        var favImage = $('#favImage');
-        var favImageHeight = favImage.height();
-        var favText = $('.favorites .wrapper');
-        var makerImage = $('#makerImage');
-        var makerImageHeight = makerImage.height();
-        var makerText = $('.winemaker .wrapper');
+        $('.favorites').imagesLoaded( function() {
+          var favImage = $('#favImage');
+          var favImageHeight = favImage.height();
+          var favText = $('.favorites .wrapper');
+          var makerImage = $('#makerImage');
+          var makerImageHeight = makerImage.height();
+          var makerText = $('.winemaker .wrapper');
 
-        favImage.parent().prev().height(favImageHeight);
-        makerImage.parent().next().height(makerImageHeight);
+          favImage.parent().prev().height(favImageHeight);
+          makerImage.parent().next().height(makerImageHeight);
 
-        setTimeout(function(){
           favText.fadeTo(400, 1);
           makerText.fadeTo(400, 1);
-        }, 100);
+        });
+
+
+
+        // setTimeout(function(){
+        //   favText.fadeTo(400, 1);
+        //   makerText.fadeTo(400, 1);
+        // }, 100);
 
 
 

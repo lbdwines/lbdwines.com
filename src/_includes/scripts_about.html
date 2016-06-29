@@ -21,21 +21,35 @@ enquire.register("screen and (max-width: 768px)", {
 
         // do layout calculations
 
-        var sectionHeight = $('section.winemaker').height();
-        var text = $('section.winemaker .text');
-        text.css('height', sectionHeight);
+        $('.winemaker').imagesLoaded( function() {
+          var makerImage = $('#makerImage');
+          var makerImageHeight = makerImage.height();
+          var makerText = $('.winemaker .wrapper');
 
-        setTimeout(function(){
-          $('section.winemaker .wrapper').fadeTo(400, 1);
-        }, 100);
+          makerImage.parent().next().height(makerImageHeight);
+
+          makerText.fadeTo(400, 1);
+        });
+
+        // var sectionHeight = $('section.winemaker').height();
+        // var text = $('section.winemaker .text');
+        // text.css('height', sectionHeight);
+
+        // setTimeout(function(){
+        //   $('section.winemaker .wrapper').fadeTo(400, 1);
+        // }, 100);
 
 
         // on resize --> prob don't need fade behavior at all, just redo positioning
         window.onresize = debounce(function(){
           if ($(window).width() != windowWidth) {
-            var sectionHeight = $('section.winemaker').height();
-            var text = $('section.winemaker .text');
-            text.css('height', sectionHeight);
+            var makerImage = $('#makerImage');
+            var makerImageHeight = makerImage.height();
+            var makerText = $('.winemaker .wrapper');
+
+            makerImage.parent().next().height(makerImageHeight);
+
+            makerText.fadeTo(400, 1);
           }
         }, 100);
 
