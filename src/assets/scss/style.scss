@@ -40,7 +40,7 @@ $visual-grid-opacity: 0.2;
 .avenir-bold { font-family: AvenirLTStd-Black; }
 
 main, footer, .footer { // js fade in
-  animation: fadein 2s;
+  animation: fadein 1s;
 }
 
 @keyframes fadein {

@@ -39,7 +39,7 @@
         .wrapper {
           @include span-columns(3 of 5);
           @include vertical-align;
-          animation: fadein 4s;
+          opacity: 0;
           h3 {
             margin-top: .75rem;
           }
@@ -77,11 +77,11 @@
     @include media($l-up){
       margin-top: 135px;
       .text {
-        animation: fadein 4s;
+        animation: fadein 1s;
         @include span-columns(4);
         @include shift(1);
         .wrapper {
-          animation: fadein 4s;
+          animation: fadein 1s;
           @include span-columns(3 of 4);
           @include vertical-align;
           h3 {
