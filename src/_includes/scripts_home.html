@@ -18,22 +18,32 @@ enquire.register("screen and (max-width: 768px)", {
       var windowWidth = $(window).width(); // for resize below
       $(function() {
         // on load
-        // console.log('over 768px wide');
 
+        // do layout calculations
+        getImageSize($('#favImage'), function(width, height){
+            $('.favorites .text').height(height);
+        });
+        getImageSize($('#makerImage'), function(width, height){
+            $('.winemaker .text').height(height);
+        });
+
+        // fade-in content
         var page = $('main, footer, .footer');
         setTimeout(function(){
           page.fadeIn();
         }, 250);
 
         // on resize --> prob don't need fade behavior at all, just redo positioning
-        // window.onresize = debounce(function(){
-        //   if ($(window).width() != windowWidth) {
-        //     page.fadeOut(50);
-        //     setTimeout(function(){
-        //       page.fadeIn();
-        //     }, 250);
-        //   }
-        // }, 500);
+        window.onresize = debounce(function(){
+          if ($(window).width() != windowWidth) {
+            getImageSize($('#favImage'), function(width, height){
+                $('.favorites .text').height(height);
+            });
+            getImageSize($('#makerImage'), function(width, height){
+                $('.winemaker .text').height(height);
+            });
+          }
+        }, 500);
 
       });
     },
@@ -56,5 +66,37 @@ enquire.register("screen and (max-width: 768px)", {
       if (callNow) func.apply(context, args);
     };
   };
+
+  // http://stackoverflow.com/questions/23390393/get-image-height-before-its-fully-loaded
+  function getImageSize(img, callback){
+      img = $(img);
+
+      var wait = setInterval(function(){
+          var w = img.width(),
+              h = img.height();
+
+          if(w && h){
+              done(w, h);
+          }
+      }, 0);
+
+      var onLoad;
+      img.on('load', onLoad = function(){
+          done(img.width(), img.height());
+      });
+
+      var isDone = false;
+      function done(){
+          if(isDone){
+              return;
+          }
+          isDone = true;
+
+          clearInterval(wait);
+          img.off('load', onLoad);
+
+          callback.apply(this, arguments);
+      }
+  }
 
 </script>
