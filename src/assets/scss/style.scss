@@ -39,8 +39,8 @@ $visual-grid-opacity: 0.2;
 .avenir { font-family: AvenirLTStd-Book; }
 .avenir-bold { font-family: AvenirLTStd-Black; }
 
-.load { // js fade in dynamically sized content
-  opacity: 0;
+main, footer, .footer { // js fade in
+  display: none;
 }
 
 body {
@@ -48,6 +48,7 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   font-family: $base-font-family;
+  min-height: 100vh;
 }
 
 body:before {

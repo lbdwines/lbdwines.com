@@ -1,92 +1,60 @@
 <script>
 
-  var windowWidth = $(window).width();
+enquire.register("screen and (max-width: 768px)", {
+    match : function() {
 
-  $(function() {
-    // on load
+      $(function() {
+        // on load
+        // console.log('up to 768px wide');
 
-    var main = $('main');
-    setTimeout(function(){
-      $(main).fadeIn().removeClass('load').addClass('loaded');
-    }, 250);
+        // on resize
+      });
+    },
+    unmatch : function() {
+    }
+  })
+  .register("screen and (min-width: 769px)", {
+    match : function() {
+      var windowWidth = $(window).width(); // for resize below
+      $(function() {
+        // on load
+        // console.log('over 768px wide');
 
-    // on resize
-    window.onresize = function(){
-      // actual resize? http://tinyurl.com/qaoajzu
-      if ($(window).width() != windowWidth) {
-        var main = $('main');
-        $(main).removeClass('loaded').addClass('load');
+        var page = $('main, footer, .footer');
         setTimeout(function(){
-          $(main).fadeIn().removeClass('load').addClass('loaded');
+          page.fadeIn();
         }, 250);
-      }
+
+        // on resize --> prob don't need fade behavior at all, just redo positioning
+        // window.onresize = debounce(function(){
+        //   if ($(window).width() != windowWidth) {
+        //     page.fadeOut(50);
+        //     setTimeout(function(){
+        //       page.fadeIn();
+        //     }, 250);
+        //   }
+        // }, 500);
+
+      });
+    },
+    unmatch : function() {
     }
-
-
-    // jqverify
-    //
-
-    // eraseCookie('jqverify');
-
-    var agemodal = "#agemodal",
-        formsubmit = "#formsubmit",
-        modalContent = "main",
-        agecookie = 'jqverify';
-
-    if (!readCookie( agecookie)) {
-        jQuery(agemodal).fadeIn();
-    } else {
-        jQuery(modalContent).fadeIn();
-    }
-
-    jQuery(formsubmit).on('click', function(event){
-
-      if (event.preventDefault) {
-        event.preventDefault();
-      } else {
-        event.returnValue = false;
-      }
-
-      createCookie( agecookie, 1, 30); // expire in 30 days
-
-      jQuery(agemodal).fadeOut();
-      jQuery(modalContent).fadeIn();
-      return true;
-    });
-
-    function createCookie(name,value,days) {
-      var date = new Date();
-      var expires = "";
-      if (days) {
-          date.setTime(date.getTime()+(days*24*60*60*1000));
-          expires = "; expires="+date.toGMTString();
-      }
-      document.cookie = name+"="+value+expires+"; path=/";
-
-      console.log(name+"="+value+expires+"; path=/");
-    }
-
-    function readCookie(name) {
-        var nameEQ = name + "=";
-        var ca = document.cookie.split(';');
-        for(var i=0; i < ca.length; i++) {
-            var c = ca[i];
-            while (c.charAt(0)==' ') c = c.substring(1,c.length);
-            if (c.indexOf(nameEQ) === 0) {
-              return c.substring(nameEQ.length,c.length);
-            }
-        }
-        return null;
-    }
-
-    /**
-     * A handy little function to erase cookies,
-     * useful when testing/debugging:
-     */
-    function eraseCookie(cookieName) {
-        createCookie(cookieName,"",-1);
-    }
-
   });
+
+  // https://davidwalsh.name/javascript-debounce-function
+  function debounce(func, wait, immediate) {
+    var timeout;
+    return function() {
+      var context = this, args = arguments;
+      var later = function() {
+        timeout = null;
+        if (!immediate) func.apply(context, args);
+      };
+      var callNow = immediate && !timeout;
+      clearTimeout(timeout);
+      timeout = setTimeout(later, wait);
+      if (callNow) func.apply(context, args);
+    };
+  };
 
 </script>
