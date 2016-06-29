@@ -91,4 +91,14 @@
     }
   }
 
+ // sticky footer
+  .footer-wrapper {
+    @include media($l-up){
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+    }
+  }
+
 }

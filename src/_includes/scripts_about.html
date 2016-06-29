@@ -1,27 +1,66 @@
 <script>
 
-  var windowWidth = $(window).width();
+enquire.register("screen and (max-width: 768px)", {
+    match : function() {
 
-  $(function() {
-    // on load
+      $(function() {
+        // on load
+        // console.log('up to 768px wide');
 
-    var sectionHeight = $('section.winemaker').height();
-    var text = $('section.winemaker .text');
-    text.css('height', sectionHeight);
-
-
-    // on resize
-    window.onresize = function(){
-      // actual resize? http://tinyurl.com/qaoajzu
-      if ($(window).width() != windowWidth) {
-        var main = $('main');
-        $(main).removeClass('loaded').addClass('load');
-        setTimeout(function(){
-          $(main).fadeIn().removeClass('load').addClass('loaded');
-        }, 250);
-      }
+        // on resize
+      });
+    },
+    unmatch : function() {
     }
+  })
+  .register("screen and (min-width: 769px)", {
+    match : function() {
+      var windowWidth = $(window).width(); // for resize below
+      $(function() {
+        // on load
 
+        // do layout calculations
+
+        var sectionHeight = $('section.winemaker').height();
+        var text = $('section.winemaker .text');
+        text.css('height', sectionHeight);
+
+        setTimeout(function(){
+          $('section.winemaker .wrapper').fadeTo(400, 1);
+        }, 100);
+
+
+        // on resize --> prob don't need fade behavior at all, just redo positioning
+        window.onresize = debounce(function(){
+          if ($(window).width() != windowWidth) {
+            var sectionHeight = $('section.winemaker').height();
+            var text = $('section.winemaker .text');
+            text.css('height', sectionHeight);
+          }
+        }, 100);
+
+      });
+    },
+    unmatch : function() {
+    }
   });
+
+  // https://davidwalsh.name/javascript-debounce-function
+  function debounce(func, wait, immediate) {
+    var timeout;
+    return function() {
+      var context = this, args = arguments;
+      var later = function() {
+        timeout = null;
+        if (!immediate) func.apply(context, args);
+      };
+      var callNow = immediate && !timeout;
+      clearTimeout(timeout);
+      timeout = setTimeout(later, wait);
+      if (callNow) func.apply(context, args);
+    };
+  };
+
+
 
 </script>
