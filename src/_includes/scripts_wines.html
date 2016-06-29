@@ -4,22 +4,34 @@
 
   $(function() {
     // on load
+
+    var wines = $('.product');
+
+    setTimeout(function(){
+      wines.fadeTo(400, 1);
+    }, 100);
+
     var breakouts = $('.breakout');
     var breakoutHeight = breakouts.eq(0).height();
     var productHeight = $('.product').first().height();
     var pad = (breakoutHeight - productHeight) / 2;
 
-    // breakouts.eq(0).prev().css({"margin-bottom": "0px", "padding-top": pad});
-    // breakouts.eq(1).next().css({"margin-bottom": "0px", "padding-top": pad});
+    breakouts.eq(0).prev().css({"margin-bottom": "0px", "padding-top": pad});
+    breakouts.eq(1).next().css({"margin-bottom": "0px", "padding-top": pad});
 
 
     // on resize
     window.onresize = function(){
       // actual resize? http://tinyurl.com/qaoajzu
       if ($(window).width() != windowWidth) {
+        var breakouts = $('.breakout');
+        var breakoutHeight = breakouts.eq(0).height();
+        var productHeight = $('.product').first().height();
+        var pad = (breakoutHeight - productHeight) / 2;
 
+        breakouts.eq(0).prev().css({"margin-bottom": "0px", "padding-top": pad});
+        breakouts.eq(1).next().css({"margin-bottom": "0px", "padding-top": pad});
       }
-
     }
   });
 

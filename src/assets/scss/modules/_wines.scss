@@ -41,6 +41,7 @@
     .product {
       @include span-columns(4);
       margin-bottom: 90px;
+      opacity: 0;
       img {
         display: block;
       }
