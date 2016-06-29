@@ -28,7 +28,9 @@ enquire.register("screen and (max-width: 768px)", {
 
           makerImage.parent().next().height(makerImageHeight);
 
-          makerText.fadeTo(400, 1);
+          setTimeout(function(){
+            makerText.fadeTo(400, 1);
+          }, 100);
         });
 
         // var sectionHeight = $('section.winemaker').height();

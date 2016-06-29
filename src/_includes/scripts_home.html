@@ -32,16 +32,15 @@ enquire.register("screen and (max-width: 768px)", {
           favImage.parent().prev().height(favImageHeight);
           makerImage.parent().next().height(makerImageHeight);
 
-          favText.fadeTo(400, 1);
-          makerText.fadeTo(400, 1);
+          setTimeout(function(){
+            favText.fadeTo(400, 1);
+            makerText.fadeTo(400, 1);
+          }, 100);
         });
 
 
 
-        // setTimeout(function(){
-        //   favText.fadeTo(400, 1);
-        //   makerText.fadeTo(400, 1);
-        // }, 100);
+
 
 
 
