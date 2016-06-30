@@ -29,7 +29,14 @@
       padding-top: 90px;
     }
     .questions {
-      @include span-columns(4);
+      @include media(min-width 769px max-width 900px){
+        @include span-columns(5);
+        @include shift(1);
+      }
+      @include media(900px){
+        @include span-columns(4);
+        @include shift(2);
+      }
       padding: 4.5rem 0;
       background-color: #eeeeee;
       @include shift(2);
@@ -60,7 +67,12 @@
       }
     }
     .partnership {
-      @include span-columns(4);
+      @include media(min-width 769px max-width 900px){
+        @include span-columns(5);
+      }
+      @include media(900px){
+        @include span-columns(4);
+      }
       padding: 4.5rem 0;
       background-color: #eeeeee;
       h4 {
