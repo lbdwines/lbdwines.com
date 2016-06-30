@@ -30,6 +30,13 @@ layout: default
             <p>{{ page.varietal_breakdown }}</p>
           </div>
         </div>
+        {% if page.purchase_link %}
+        <div class="shop">
+          <a target="_blank" href="{{ page.purchase_link }}"><button class="store">shop online</button></a>
+        </div>
+        {% endif %}
+
+
       </div>
       <div class="image">
         <img src="{{ page.image_path }}" alt="">

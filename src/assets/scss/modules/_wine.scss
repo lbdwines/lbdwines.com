@@ -37,6 +37,24 @@
         .wrapper {
           @include span-columns(4 of 5);
         }
+        .shop {
+          float: left;
+          margin-top: 2rem;
+          .store {
+            @include transition(all .2s ease);
+            margin-top: .5rem;
+            padding: 1em 1em;
+            width: 230px;
+            background-color: transparent;
+            border: 3px solid #dbb7bb;
+            border-radius: 0px;
+            &:hover {
+              @include transition(all .2s ease);
+              opacity: .7;
+              color: #313131;
+            }
+          }
+        }
       }
       .image  {
         @include span-columns(6);
@@ -85,9 +103,9 @@
     @include media($l-up){
       // margin-bottom: 135px;
       .buttons {
-        @include transition(all .2s ease);
         text-align: center;
         .store {
+          @include transition(all .2s ease);
           margin-top: .5rem;
           // margin-left: 27px;
           // margin-right: 27px;
@@ -97,6 +115,7 @@
           border: 3px solid #dbb7bb;
           border-radius: 0px;
           &:hover {
+            @include transition(all .2s ease);
             opacity: .7;
             color: #313131;
           }
