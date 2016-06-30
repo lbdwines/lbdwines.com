@@ -48,10 +48,10 @@
       .text {
         @include span-columns(4);
         @include shift(1);
+        opacity: 0;
         .wrapper {
           @include span-columns(4 of 4);
-          @include vertical-align;
-          opacity: 0;
+          // @include vertical-align;
           h3 {
             margin-top: .75rem;
           }
@@ -75,6 +75,7 @@
       .image {
         @include span-columns(5);
         @include shift();
+        opacity: 0;
       }
     }
   }

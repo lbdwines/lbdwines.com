@@ -22,36 +22,46 @@ enquire.register("screen and (max-width: 768px)", {
         // do layout calculations
 
         $('.winemaker').imagesLoaded( function() {
-          var makerImage = $('#makerImage');
-          var makerImageHeight = makerImage.height();
-          var makerText = $('.winemaker .wrapper');
+          var makerImageDiv = $('.winemaker .image');
+          var makerImageDivHeight = makerImageDiv.height();
+          var makerTextDiv = $('.winemaker .text');
+          var makerTextDivHeight = $('.winemaker .text').height();
 
-          makerImage.parent().next().height(makerImageHeight);
-
-          setTimeout(function(){
-            makerText.fadeTo(400, 1);
-          }, 100);
+          if (makerTextDivHeight > makerImageDivHeight) {
+            var pad = (makerTextDivHeight - makerImageDivHeight) / 2;
+            makerImageDiv.css("padding-top", pad);
+            setTimeout(function(){
+              makerImageDiv.fadeTo(400, 1);
+              makerTextDiv.fadeTo(400, 1);
+            }, 100);
+          } else {
+            var pad = (makerImageDivHeight - makerTextDivHeight) / 2;
+            makerTextDiv.css("padding-top", pad);
+            setTimeout(function(){
+              makerImageDiv.fadeTo(400, 1);
+              makerTextDiv.fadeTo(400, 1);
+            }, 100);
+          }
         });
-
-        // var sectionHeight = $('section.winemaker').height();
-        // var text = $('section.winemaker .text');
-        // text.css('height', sectionHeight);
-
-        // setTimeout(function(){
-        //   $('section.winemaker .wrapper').fadeTo(400, 1);
-        // }, 100);
 
 
         // on resize --> prob don't need fade behavior at all, just redo positioning
         window.onresize = debounce(function(){
           if ($(window).width() != windowWidth) {
-            var makerImage = $('#makerImage');
-            var makerImageHeight = makerImage.height();
-            var makerText = $('.winemaker .wrapper');
+            var makerImageDiv = $('.winemaker .image');
+            var makerImageDivHeight = makerImageDiv.height();
+            var makerTextDiv = $('.winemaker .text');
+            var makerTextDivHeight = $('.winemaker .text').height();
 
-            makerImage.parent().next().height(makerImageHeight);
+            var pad = 0;
 
-            makerText.fadeTo(400, 1);
+            if (makerTextDivHeight > makerImageDivHeight) {
+              pad = (makerTextDivHeight - makerImageDivHeight) / 2;
+              makerImageDiv.css("padding-top", pad);
+            } else {
+              pad = (makerImageDivHeight - makerTextDivHeight) / 2;
+              makerTextDiv.css("padding-top", pad);
+            }
           }
         }, 100);
 
