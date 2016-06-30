@@ -29,6 +29,24 @@ header.navigation {
   top: 0;
   left: 0;
 
+  // show/hide based on collapsed nab
+  .mobile {
+    @include media($s){
+      display: block !important;
+    }
+    @include media($horizontal-bar-mode){
+      display: none !important;
+    }
+  }
+  .desktop {
+    @include media($s){
+      display: none !important;
+    }
+    @include media($horizontal-bar-mode){
+      display: block !important;
+    }
+  }
+
   .navigation-wrapper {
     @include clearfix;
     position: relative;
@@ -114,6 +132,10 @@ header.navigation {
     clear: both;
     display: none;
     margin: 0 auto;
+    @include media(min-width 100px max-width 859px){
+      padding-top: 2rem;
+      padding-bottom: 3rem;
+    }
     overflow: visible;
     padding: 0;
     width: 100%;
@@ -142,15 +164,26 @@ header.navigation {
     display: block;
     line-height: $navigation-height;
     overflow: hidden;
-    // padding-right: 0.8em;
-    text-align: right;
+    @include media(100px){
+      text-align: center;
+    }
+    @include media($horizontal-bar-mode){
+      text-align: right;
+    }
     width: 100%;
     z-index: 9999;
     margin-right: 2rem;
     padding-bottom: 3px;
     border-bottom: 2px solid transparent;
     &.active {
-      border-bottom: 2px solid #ffc0cb;
+      @include media($horizontal-bar-mode){
+        border-bottom: 2px solid #ffc0cb;
+      }
+    }
+    &.active a {
+      @include media(min-width 100px max-width $horizontal-bar-mode){
+        color: #ffc0cb;
+      }
     }
 
     @include media ($horizontal-bar-mode) {
@@ -177,7 +210,9 @@ header.navigation {
 
       &:focus,
       &:hover {
-        color: $navigation-color-hover;
+        @include media($horizontal-bar-mode){
+          color: $navigation-color-hover;
+        }
       }
     }
 
@@ -185,16 +220,20 @@ header.navigation {
       @include transition(all .2s ease);
     }
 
-    // a:hover::after {
-    //   @include transition(all .2s ease);
-    //   content: '';
-    //   display: block;
-    //   background: #dbb7bb;
-    //   height: 2px;
-    //   width: 100%;
-    //   margin: 0 auto;
-    //   margin-top: -1rem;
-    // }
+    &.find {
+      a {
+        font-family: AvenirLTStd-Book;
+        font-size: 12px;
+        line-height: 23px;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+        text-decoration: none;
+        color: white;
+        text-transform: uppercase;
+        width: 154px;
+        border: 2px solid #dbb7bb;
+      }
+    }
 
   }
 
