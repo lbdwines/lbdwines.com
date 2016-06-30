@@ -43,6 +43,12 @@ main, footer, .footer { // js fade in
   animation: fadein 2s;
 }
 
+main, .footer-wrapper {
+  @include media(min-width 100px max-width 768px){
+    display: none;
+  }
+}
+
 @keyframes fadein {
   from {
     opacity:0;
