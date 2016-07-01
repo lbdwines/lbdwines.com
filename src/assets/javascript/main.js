@@ -55,44 +55,101 @@
         match : function() {
           var windowWidth = $(window).width(); // for resize below
           $(function() {
-            //
-            // on load
-            //
-
-            // homepage
-            $('#home-favorites').not('.processed').imagesLoaded( function() {
-              var favImage = $('#favImage');
-              var favImageHeight = favImage.height();
-              var favText = $('.favorites .wrapper');
-              var makerImage = $('#makerImage');
-              var makerImageHeight = makerImage.height();
-              var makerText = $('.winemaker .wrapper');
-              $(this).addClass('processed');
-
-              favImage.parent().prev().height(favImageHeight);
-              makerImage.parent().next().height(makerImageHeight);
-
-              setTimeout(function(){
-                favText.fadeTo(400, 1);
-                makerText.fadeTo(400, 1);
-              }, 100);
-            });
-
-            //
-            // on resize
-            //
-
-            // homepage
-            window.onresize = debounce(function(){
-              if ($(window).width() != windowWidth) {
+            // HOME
+            var homeFavorites = $('#home-favorites');
+            if (homeFavorites.length > 0)
+              homeFavorites.imagesLoaded( function() {
                 var favImage = $('#favImage');
                 var favImageHeight = favImage.height();
+                var favText = $('.favorites .wrapper');
                 var makerImage = $('#makerImage');
                 var makerImageHeight = makerImage.height();
+                var makerText = $('.winemaker .wrapper');
+                $(this).addClass('processed');
                 favImage.parent().prev().height(favImageHeight);
                 makerImage.parent().next().height(makerImageHeight);
-              }
-            }, 100);
+                setTimeout(function(){
+                  favText.fadeTo(400, 1);
+                  makerText.fadeTo(400, 1);
+                }, 100);
+                window.onresize = debounce(function(){
+                  if ($(window).width() != windowWidth) {
+                    var favImage = $('#favImage');
+                    var favImageHeight = favImage.height();
+                    var makerImage = $('#makerImage');
+                    var makerImageHeight = makerImage.height();
+                    favImage.parent().prev().height(favImageHeight);
+                    makerImage.parent().next().height(makerImageHeight);
+                  }
+                }, 100);
+              });
+
+            // WINES
+            var wines = $('#wines');
+            if(wines.length > 0)
+              wines.imagesLoaded( function() {
+                var wines = $('.product');
+                wines.fadeTo(400, 1);
+                var breakouts = $('.breakout');
+                var breakoutHeight = breakouts.eq(0).height();
+                var productHeight = $('.product').first().height();
+                var pad = (breakoutHeight - productHeight) / 2;
+                breakouts.eq(0).prev().css({"margin-bottom": "0px", "padding-top": pad});
+                breakouts.eq(1).next().css({"margin-bottom": "0px", "padding-top": pad});
+                window.onresize = debounce(function(){
+                  if ($(window).width() != windowWidth) {
+                    var breakouts = $('.breakout');
+                    var breakoutHeight = breakouts.eq(0).height();
+                    var productHeight = $('.product').first().height();
+                    var pad = (breakoutHeight - productHeight) / 2;
+                    breakouts.eq(0).prev().css({"margin-bottom": "0px", "padding-top": pad});
+                    breakouts.eq(1).next().css({"margin-bottom": "0px", "padding-top": pad});
+                  }
+                }, 100);
+              });
+
+            //
+            var about = $('#about');
+            if(about.length > 0)
+              about.imagesLoaded( function() {
+                var makerImageDiv = $('.winemaker .image');
+                var makerImageDivHeight = makerImageDiv.height();
+                var makerTextDiv = $('.winemaker .text');
+                var makerTextDivHeight = $('.winemaker .text').height();
+                if (makerTextDivHeight > makerImageDivHeight) {
+                  var pad = (makerTextDivHeight - makerImageDivHeight) / 2;
+                  makerImageDiv.css("padding-top", pad);
+                  setTimeout(function(){
+                    makerImageDiv.fadeTo(400, 1);
+                    makerTextDiv.fadeTo(400, 1);
+                  }, 100);
+                } else {
+                  var pad = (makerImageDivHeight - makerTextDivHeight) / 2;
+                  makerTextDiv.css("padding-top", pad);
+                  setTimeout(function(){
+                    makerImageDiv.fadeTo(400, 1);
+                    makerTextDiv.fadeTo(400, 1);
+                  }, 100);
+                }
+                window.onresize = debounce(function(){
+                  if ($(window).width() != windowWidth) {
+                    var makerImageDiv = $('.winemaker .image');
+                    var makerImageDivHeight = makerImageDiv.height();
+                    var makerTextDiv = $('.winemaker .text');
+                    var makerTextDivHeight = $('.winemaker .text').height();
+                    var pad = 0;
+                    if (makerTextDivHeight > makerImageDivHeight) {
+                      pad = (makerTextDivHeight - makerImageDivHeight) / 2;
+                      makerImageDiv.css("padding-top", pad);
+                    } else {
+                      pad = (makerImageDivHeight - makerTextDivHeight) / 2;
+                      makerTextDiv.css("padding-top", pad);
+                    }
+                    console.log('resize about');
+                  }
+                }, 100);
+              });
+
 
           });
         },
@@ -137,21 +194,5 @@
     },
     smoothState = $page.smoothState(options).data('smoothState');
 
-    // debounce
-    // https://davidwalsh.name/javascript-debounce-function
-    function debounce(func, wait, immediate) {
-      var timeout;
-      return function() {
-        var context = this, args = arguments;
-        var later = function() {
-          timeout = null;
-          if (!immediate) func.apply(context, args);
-        };
-        var callNow = immediate && !timeout;
-        clearTimeout(timeout);
-        timeout = setTimeout(later, wait);
-        if (callNow) func.apply(context, args);
-      };
-    };
 
 })();
