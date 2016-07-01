@@ -2,6 +2,9 @@
   @include media($l-up){
     margin-top: 135px;
   }
+  @include media(min-width 100px max-width 1385px){
+    @include pad(0 1rem);
+  }
   a {
     color: #313131;
     text-decoration: none;
@@ -73,6 +76,9 @@ footer {
   font-family: AvenirLTStd-Book;
   letter-spacing: 2px;
   color: white;
+  @include media(min-width 100px max-width 1385px){
+    @include pad(0 1rem);
+  }
   .copyright {
     @include media($l-up){
       display: inline-block;
