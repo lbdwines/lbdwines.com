@@ -2,34 +2,44 @@
 
 (function() {
 
-  // visual grid: use 'g' key to toggle body class
-  // var k = new Kibo();
-  // k.down(['g'], function() {
-  //   $('body').addClass('grid');
-  // }).up('g', function() {
-  //   $('body').removeClass('grid');
-  // });
+  prep();
 
-  // navigation
-  // var menuToggle = $("#js-mobile-menu").unbind();
-  // $("#js-navigation-menu").removeClass("show");
+  // this function contains others that need to run on every smoothsState page change
+  function prep(){
+    // visual grid
+    var k = new Kibo();
+    k.down(['g'], function() {
+      $('body').addClass('grid');
+    }).up('g', function() {
+      $('body').removeClass('grid');
+    });
 
-  // menuToggle.on("click", function(e) {
-  //   e.preventDefault();
-  //   $("#js-navigation-menu").slideToggle(function(){
-  //     if($("#js-navigation-menu").is(":hidden")) {
-  //       $("#js-navigation-menu").removeAttr("style");
-  //     }
-  //   });
-  // });
+    // nav menu
+    var menuToggle = $("#js-mobile-menu").unbind();
+    $("#js-navigation-menu").removeClass("show");
 
-  // $('#main').smoothState();
+    menuToggle.on("click", function(e) {
+      e.preventDefault();
+      $("#js-navigation-menu").slideToggle(function(){
+        if($("#js-navigation-menu").is(":hidden")) {
+          $("#js-navigation-menu").removeAttr("style");
+        }
+      });
+    });
+
+
+
+  } // end of prep()
+
+
+
 
   var $page = $('#main'),
     options = {
+      blacklist: '.no-smoothState',
       debug: true,
       prefetch: true,
-      cacheLength: 2,
+      cacheLength: 4,
       onStart: {
         duration: 250, // Duration of our animation
         render: function ($container) {
@@ -47,6 +57,9 @@
           // Inject the new content
           $container.html($newContent);
         }
+      },
+      onAfter: function() {
+        prep();
       }
     },
     smoothState = $page.smoothState(options).data('smoothState');
