@@ -5,13 +5,17 @@
 
   <body class="{% if page.class %}{{ page.class }}{% endif %}">
 
-  {% include header.html %}
+  <div id="main">
+
+    {% include header.html %}
 
 
-    {{ content }}
+      {{ content }}
 
 
-  {% include footer.html %}
+    {% include footer.html %}
+
+  </div>
 
   <!-- JS -->
   <!-- inject:js -->

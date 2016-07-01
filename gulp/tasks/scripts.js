@@ -25,6 +25,7 @@ gulp.task('scripts', () =>
     'src/assets/javascript/kibo.min.js',
     'src/assets/javascript/imagesloaded.pkgd.min.js',
     'src/assets/javascript/vendor.js',
+    'src/assets/javascript/jquery.smoothState.js',
     'src/assets/javascript/main.js'
   ])
     .pipe(newer('.tmp/assets/javascript/index.js', {dest: '.tmp/assets/javascript', ext: '.js'}))

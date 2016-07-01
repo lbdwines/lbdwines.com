@@ -23,5 +23,7 @@
   //   });
   // });
 
+  $('#main').smoothState();
+  console.log('smoothstate');
 
 })();

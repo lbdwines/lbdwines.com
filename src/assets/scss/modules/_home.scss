@@ -39,7 +39,7 @@
         .wrapper {
           @include span-columns(3 of 5);
           @include vertical-align;
-          opacity: 0;
+          // opacity: 0;
           h3 {
             margin-top: .75rem;
           }
