@@ -179,7 +179,11 @@ header.navigation {
     clear: both;
     display: none;
     margin: 0 auto;
-    @include media(min-width 100px max-width 859px){
+    @include media($s){
+      padding-top: 50px;
+      padding-bottom: 72px;
+    }
+    @include media(min-width 769px max-width 859px){
       padding-top: 2rem;
       padding-bottom: 3rem;
     }
@@ -204,7 +208,12 @@ header.navigation {
   ul li.nav-link {
     @include transition(all .35s ease);
     font-family: AvenirLTStd-Medium;
-    font-size: 12px;
+    @include media($s){
+      font-size: 18px;
+    }
+    @include media($l){
+      font-size: 12px;
+    }
     letter-spacing: 2px;
     text-transform: uppercase;
     background: $navigation-background;
@@ -272,15 +281,24 @@ header.navigation {
     &.find {
       a {
         font-family: AvenirLTStd-Book;
-        font-size: 12px;
-        line-height: 23px;
-        letter-spacing: 2px;
-        text-transform: uppercase;
+        @include media($s){
+          font-size: 18px;
+          border: 3px solid #dbb7bb;
+          line-height: 1;
+          padding: 8px 1rem;
+        }
+        @include media($l){
+          font-size: 12px;
+          border: 2px solid #dbb7bb;
+          width: 154px;
+          padding: 0px;
+          line-height: 23px;
+        }
         text-decoration: none;
         color: white;
         text-transform: uppercase;
-        width: 154px;
-        border: 2px solid #dbb7bb;
+
+
       }
     }
 
