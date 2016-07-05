@@ -7,8 +7,8 @@
         @include span-columns(5);
         .name, .description, .notes, .varietal {
           @include span-columns(5 of 5);
-          padding-top: 1rem;
-          padding-bottom: 1rem;
+          // padding-top: 1rem;
+          // padding-bottom: 1rem;
           border-bottom: 2px solid #f2f2f2;
         }
         .name {
@@ -27,7 +27,9 @@
         }
         .notes {
           h4 {
-            margin-bottom: 1rem;
+            margin-bottom: 0px;
+            padding-top: 1rem;
+            padding-bottom: 1rem;
           }
           p {
             margin: 0px;
@@ -35,6 +37,12 @@
             &:last-of-type {
               margin-bottom: 1em;
             }
+          }
+        }
+        .varietal {
+          h4 {
+            padding-top: 1rem;
+            padding-bottom: 1rem;
           }
         }
         .wrapper {
@@ -136,6 +144,10 @@
 
   /* Requirements */
 
+  .accordion {
+    cursor: pointer;
+  }
+
   [data-accordion] [data-content] {
       overflow: hidden;
       max-height: 0;
@@ -149,8 +161,8 @@
 
   [data-control],
   [data-content] > * {
-      border-bottom: 1px solid #888;
-      padding: 10px;
+      // border-bottom: 1px solid #888;
+      // padding: 10px;
   }
 
   [data-content] [data-accordion] {
@@ -164,23 +176,17 @@
   }
 
   [data-accordion] > [data-control]:after {
-      content: "";
+      content: "+";
       position: absolute;
       right: 10px;
-      top: 12px;
-      font-size: 25px;
-      font-weight: 200;
-      color: #444;
+      top: 1rem;
+      font-size: 1rem;
+      font-weight: bold;
+      color: #000;
       height: 15px;
       width: 24px;
-      background: url('../images/down.png') center center no-repeat;
-      background-size: 50%;
-  }
-
-  [data-accordion].open > [data-control]:after {
-      -webkit-transform: rotate(-180deg);
-      -ms-transform: rotate(-180deg);
-      transform: rotate(-180deg);
+      // background: url('../images/down.png') center center no-repeat;
+      // background-size: 50%;
   }
 
 }

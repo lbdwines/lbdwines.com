@@ -17,7 +17,35 @@ layout: default
             {{ page.content }}
           </div>
         </div>
-        <div class="notes">
+
+          <div data-accordion-group>
+          <div class="notes">
+            <div class="accordion" data-accordion>
+              <div data-control><h4>technical notes</h4></div>
+              <div data-content>
+                <p>Total Acidity: {{ page.total_acidity }}</p>
+                <p>pH: {{ page.ph }}</p>
+                <p>Residual Sugar: {{ page.residual_sugar }}</p>
+                <p>alcohol: {{ page.alcohol }}</p>
+              </div>
+            </div>
+          </div>
+          <div class="varietal">
+            <div class="accordion" data-accordion>
+              <div data-control><h4>varietal breakdown</h4></div>
+              <div data-content>
+                <div class="wrapper">
+                  <p>{{ page.varietal_breakdown }}</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          </div>
+
+
+
+       <!--  <div class="notes">
           <h4>technical notes</h4>
           <p>Total Acidity: {{ page.total_acidity }}</p>
           <p>pH: {{ page.ph }}</p>
@@ -29,7 +57,7 @@ layout: default
           <div class="wrapper">
             <p>{{ page.varietal_breakdown }}</p>
           </div>
-        </div>
+        </div> -->
         {% if page.purchase_link %}
         <div class="shop">
           <a target="_blank" href="{{ page.purchase_link }}"><button class="store">shop online</button></a>

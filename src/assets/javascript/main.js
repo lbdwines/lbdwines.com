@@ -32,6 +32,11 @@
       });
     });
 
+    // accordion
+    $('.accordion').accordion({
+      singleOpen: false
+    });
+
     //
     //  2 - these run in an enquire conditional
     //
