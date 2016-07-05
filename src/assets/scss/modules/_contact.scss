@@ -104,7 +104,7 @@
   }
 
  // sticky footer
-  .footer-wrapper {
+  .footer-wrapper.fixed {
     @include media($l-up){
       position: absolute;
       bottom: 0;
