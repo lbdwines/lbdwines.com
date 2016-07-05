@@ -57,8 +57,14 @@
       p a {
         // font-weight: bold;
         text-decoration: underline;
-        color: #313131;
-        letter-spacing: 1px;
+        color: #000000;
+        // letter-spacing: 1px;
+        &:hover {
+          opacity: .7;
+        }
+      }
+      p.link {
+        margin-top: 2px;
       }
     }
     .partner:nth-of-type(3n) {

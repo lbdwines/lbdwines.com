@@ -55,7 +55,7 @@
             border-radius: 0px;
             &:hover {
               opacity: .7;
-              color: #313131;
+              color: #000000;
             }
           }
         }
@@ -99,7 +99,7 @@
             border-radius: 0px;
             &:hover {
               opacity: .7;
-              color: #313131;
+              color: #000000;
             }
           }
         }
@@ -174,7 +174,7 @@
           &:hover {
             @include transition(all .2s ease);
             opacity: .7;
-            color: #313131;
+            color: #000000;
           }
         }
         .store {
@@ -190,7 +190,7 @@
           &:hover {
             @include transition(all .2s ease);
             opacity: .7;
-            color: #313131;
+            color: #000000;
           }
         }
       }

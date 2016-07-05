@@ -5,7 +5,7 @@ header.navigation {
   $dark-gray: #333 !default;
   $large-screen: 53.75em !default;
   $navigation-padding: 1em;
-  $navigation-background: #313131;
+  $navigation-background: #000000;
   $navigation-color: white;
   $navigation-color-hover: white;
   $navigation-height: 54px;
@@ -202,7 +202,7 @@ header.navigation {
   // The nav items
 
   ul li.nav-link {
-    @include transition(all .2s ease);@include transition(all .2s ease);
+    @include transition(all .35s ease);
     font-family: AvenirLTStd-Medium;
     font-size: 12px;
     letter-spacing: 2px;
@@ -224,12 +224,13 @@ header.navigation {
     border-bottom: 2px solid transparent;
     &.active {
       @include media($horizontal-bar-mode){
-        border-bottom: 2px solid #ffc0cb;
+        @include transition(all .35s ease);
+        border-bottom: 2px solid #dbb7bb;
       }
     }
     &.active a {
       @include media(min-width 100px max-width $horizontal-bar-mode){
-        color: #ffc0cb;
+        color: #dbb7bb;
       }
     }
 
@@ -240,6 +241,7 @@ header.navigation {
       text-decoration: none;
       width: auto;
       &:hover {
+        @include transition(all .35s ease);
         border-bottom: 2px solid #ffc0cb;
       }
     }

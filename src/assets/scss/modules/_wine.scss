@@ -32,6 +32,9 @@
           p {
             margin: 0px;
             line-height: 1.5;
+            &:last-of-type {
+              margin-bottom: 1em;
+            }
           }
         }
         .wrapper {
@@ -51,7 +54,7 @@
             &:hover {
               @include transition(all .2s ease);
               opacity: .7;
-              color: #313131;
+              color: #000000;
             }
           }
         }
@@ -71,7 +74,7 @@
     h2 {
       text-align: left;
       margin-top: 22px;
-      margin-bottom: .25rem;
+      margin-bottom: 36px;
     }
     h5 {
       margin-top: 12px !important;
@@ -117,7 +120,7 @@
           &:hover {
             @include transition(all .2s ease);
             opacity: .7;
-            color: #313131;
+            color: #000000;
           }
         }
       }

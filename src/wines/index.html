@@ -7,7 +7,7 @@ second_image_path: https://placehold.it/663x720/cccccc/cccccc?text=fpo
 ---
 
 {% assign wines = site.wines %}
-{% assign wines = wines|sort('sort') %}
+{% assign wines = wines|sort: 'sort_order' %}
 {% assign size = wines|size %}
 
 {% if size >= 1 %}

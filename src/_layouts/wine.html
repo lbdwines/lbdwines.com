@@ -22,7 +22,7 @@ layout: default
           <p>Total Acidity: {{ page.total_acidity }}</p>
           <p>pH: {{ page.ph }}</p>
           <p>Residual Sugar: {{ page.residual_sugar }}</p>
-          <p>Alocohol: {{ page.alcohol }}</p>
+          <p>alcohol: {{ page.alcohol }}</p>
         </div>
         <div class="varietal">
           <h4>varietal breakdown</h4>
@@ -45,7 +45,7 @@ layout: default
   </section>
 
 {% assign wines = site.wines %}
-{% assign wines = wines|sort('sort') %}
+{% assign wines = wines|sort: 'sort_order' %}
   <section class="all">
     <div class="container">
       <h2>All Wines</h2>

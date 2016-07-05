@@ -8,7 +8,7 @@ residual_sugar: .3 g/mL
 alcohol: 13.0% A.B.V
 varietal_breakdown: 84% Pinot Grigio, 10% Chardonnay, 4% Muscat, 2% Viognier
 image_path: https://placehold.it/639x809/cccccc/cccccc?text=fpo
-sort: 6
+sort_order: 6
 purchase_link: https://placehold.it/800/e8117f/ffffff/?text=wine+for+sale
 ---
 

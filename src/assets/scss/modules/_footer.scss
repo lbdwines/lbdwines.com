@@ -6,7 +6,7 @@
     @include pad(0 1rem);
   }
   a {
-    color: #313131;
+    color: #000000;
     text-decoration: none;
   }
   .search {
@@ -17,7 +17,7 @@
         padding-bottom: .75rem;
         margin-top: 0px;
         margin-bottom: 2rem;
-        border-bottom: 1px solid #313131;
+        border-bottom: 1px solid #000000;
       }
       h5 {
         @include span-columns(1 of 3);
@@ -36,7 +36,7 @@
         padding-bottom: .75rem;
         margin-top: 0px;
         margin-bottom: 2rem;
-        border-bottom: 1px solid #313131;
+        border-bottom: 1px solid #000000;
       }
       h5 {
         @include span-columns(1 of 3);
@@ -55,7 +55,7 @@
         padding-bottom: .75rem;
         margin-top: 0px;
         margin-bottom: 2rem;
-        border-bottom: 1px solid #313131;
+        border-bottom: 1px solid #000000;
       }
       h5 {
         @include span-columns(1 of 3);
@@ -72,7 +72,7 @@
 
 footer {
   margin-top: 50px;
-  background: #313131;
+  background: #000000;
   font-family: AvenirLTStd-Book;
   letter-spacing: 2px;
   color: white;

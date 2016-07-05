@@ -8,7 +8,7 @@ residual_sugar: .5 g/mL
 alcohol: 13.0% A.B.V
 varietal_breakdown: 80% Chardonnay, 20% Other Complimentary White Varietals
 image_path: https://placehold.it/639x809/cccccc/cccccc?text=fpo
-sort: 1
+sort_order: 1
 purchase_link: https://placehold.it/800/e8117f/ffffff/?text=wine+for+sale
 ---
 
