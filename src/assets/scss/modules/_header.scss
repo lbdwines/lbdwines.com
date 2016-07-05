@@ -183,6 +183,10 @@ header.navigation {
       padding-top: 50px;
       padding-bottom: 72px;
     }
+    @include media(min-width 568px max-width 768px){
+      padding-top: 0;
+      padding-bottom: 3rem;
+    }
     @include media(min-width 769px max-width 859px){
       padding-top: 2rem;
       padding-bottom: 3rem;
@@ -211,6 +215,9 @@ header.navigation {
     @include media($s){
       font-size: 18px;
     }
+    @include media(min-width 568px max-width 666px){
+      font-size: 14px !important;
+    }
     @include media($l){
       font-size: 12px;
     }
@@ -218,7 +225,15 @@ header.navigation {
     text-transform: uppercase;
     background: $navigation-background;
     display: block;
-    line-height: $navigation-height;
+    @include media($s){
+      line-height: $navigation-height;
+    }
+    @include media(min-width 568px max-width 666px){
+      line-height: 50px;
+    }
+    @include media($l){
+      line-height: $navigation-height;
+    }
     overflow: hidden;
     @include media(100px){
       text-align: center;
@@ -286,6 +301,9 @@ header.navigation {
           border: 3px solid #dbb7bb;
           line-height: 1;
           padding: 8px 1rem;
+        }
+        @include media(min-width 568px max-width 666px){
+          font-size: 14px !important;
         }
         @include media($l){
           font-size: 12px;
