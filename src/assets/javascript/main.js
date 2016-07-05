@@ -56,57 +56,57 @@
           var windowWidth = $(window).width(); // for resize below
           $(function() {
             // // HOME
-            // var homeFavorites = $('#home-favorites');
-            // if (homeFavorites.length > 0)
-            //   homeFavorites.imagesLoaded( function() {
-            //     var favImage = $('#favImage');
-            //     var favImageHeight = favImage.height();
-            //     var favText = $('.favorites .wrapper');
-            //     var makerImage = $('#makerImage');
-            //     var makerImageHeight = makerImage.height();
-            //     var makerText = $('.winemaker .wrapper');
-            //     $(this).addClass('processed');
-            //     favImage.parent().prev().height(favImageHeight);
-            //     makerImage.parent().next().height(makerImageHeight);
-            //     setTimeout(function(){
-            //       favText.fadeTo(400, 1);
-            //       makerText.fadeTo(400, 1);
-            //     }, 100);
-            //     window.onresize = debounce(function(){
-            //       if ($(window).width() != windowWidth) {
-            //         var favImage = $('#favImage');
-            //         var favImageHeight = favImage.height();
-            //         var makerImage = $('#makerImage');
-            //         var makerImageHeight = makerImage.height();
-            //         favImage.parent().prev().height(favImageHeight);
-            //         makerImage.parent().next().height(makerImageHeight);
-            //       }
-            //     }, 100);
-            //   });
+            var homeFavorites = $('#home-favorites');
+            if (homeFavorites.length > 0)
+              homeFavorites.imagesLoaded( function() {
+                var favImage = $('#favImage');
+                var favImageHeight = favImage.height();
+                var favText = $('.favorites .wrapper');
+                var makerImage = $('#makerImage');
+                var makerImageHeight = makerImage.height();
+                var makerText = $('.winemaker .wrapper');
+                $(this).addClass('processed');
+                favImage.parent().prev().height(favImageHeight);
+                makerImage.parent().next().height(makerImageHeight);
+                setTimeout(function(){
+                  favText.fadeTo(400, 1);
+                  makerText.fadeTo(400, 1);
+                }, 100);
+                window.onresize = debounce(function(){
+                  if ($(window).width() != windowWidth) {
+                    var favImage = $('#favImage');
+                    var favImageHeight = favImage.height();
+                    var makerImage = $('#makerImage');
+                    var makerImageHeight = makerImage.height();
+                    favImage.parent().prev().height(favImageHeight);
+                    makerImage.parent().next().height(makerImageHeight);
+                  }
+                }, 100);
+              });
 
             // // WINES
-            // var wines = $('#wines');
-            // if(wines.length > 0)
-            //   wines.imagesLoaded( function() {
-            //     var wines = $('.product');
-            //     wines.fadeTo(400, 1);
-            //     var breakouts = $('.breakout');
-            //     var breakoutHeight = breakouts.eq(0).height();
-            //     var productHeight = $('.product').first().height();
-            //     var pad = (breakoutHeight - productHeight) / 2;
-            //     breakouts.eq(0).prev().css({"margin-bottom": "0px", "padding-top": pad});
-            //     breakouts.eq(1).next().css({"margin-bottom": "0px", "padding-top": pad});
-            //     window.onresize = debounce(function(){
-            //       if ($(window).width() != windowWidth) {
-            //         var breakouts = $('.breakout');
-            //         var breakoutHeight = breakouts.eq(0).height();
-            //         var productHeight = $('.product').first().height();
-            //         var pad = (breakoutHeight - productHeight) / 2;
-            //         breakouts.eq(0).prev().css({"margin-bottom": "0px", "padding-top": pad});
-            //         breakouts.eq(1).next().css({"margin-bottom": "0px", "padding-top": pad});
-            //       }
-            //     }, 100);
-            //   });
+            var wines = $('#wines');
+            if(wines.length > 0)
+              wines.imagesLoaded( function() {
+                var wines = $('.product');
+                wines.fadeTo(400, 1);
+                var breakouts = $('.breakout');
+                var breakoutHeight = breakouts.eq(0).height();
+                var productHeight = $('.product').first().height();
+                var pad = (breakoutHeight - productHeight) / 2;
+                breakouts.eq(0).prev().css({"margin-bottom": "0px", "padding-top": pad});
+                breakouts.eq(1).next().css({"margin-bottom": "0px", "padding-top": pad});
+                window.onresize = debounce(function(){
+                  if ($(window).width() != windowWidth) {
+                    var breakouts = $('.breakout');
+                    var breakoutHeight = breakouts.eq(0).height();
+                    var productHeight = $('.product').first().height();
+                    var pad = (breakoutHeight - productHeight) / 2;
+                    breakouts.eq(0).prev().css({"margin-bottom": "0px", "padding-top": pad});
+                    breakouts.eq(1).next().css({"margin-bottom": "0px", "padding-top": pad});
+                  }
+                }, 100);
+              });
 
             // ABOUT
             var about = $('#about');
