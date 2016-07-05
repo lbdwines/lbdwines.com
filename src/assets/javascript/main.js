@@ -108,47 +108,47 @@
             //     }, 100);
             //   });
 
-            // // ABOUT
-            // var about = $('#about');
-            // if(about.length > 0)
-            //   about.imagesLoaded( function() {
-            //     var makerImageDiv = $('.winemaker .image');
-            //     var makerImageDivHeight = makerImageDiv.height();
-            //     var makerTextDiv = $('.winemaker .text');
-            //     var makerTextDivHeight = $('.winemaker .text').height();
-            //     if (makerTextDivHeight > makerImageDivHeight) {
-            //       var pad = (makerTextDivHeight - makerImageDivHeight) / 2;
-            //       makerImageDiv.css("padding-top", pad);
-            //       setTimeout(function(){
-            //         makerImageDiv.fadeTo(400, 1);
-            //         makerTextDiv.fadeTo(400, 1);
-            //       }, 100);
-            //     } else {
-            //       var pad = (makerImageDivHeight - makerTextDivHeight) / 2;
-            //       makerTextDiv.css("padding-top", pad);
-            //       setTimeout(function(){
-            //         makerImageDiv.fadeTo(400, 1);
-            //         makerTextDiv.fadeTo(400, 1);
-            //       }, 100);
-            //     }
-            //     window.onresize = debounce(function(){
-            //       if ($(window).width() != windowWidth) {
-            //         var makerImageDiv = $('.winemaker .image');
-            //         var makerImageDivHeight = makerImageDiv.height();
-            //         var makerTextDiv = $('.winemaker .text');
-            //         var makerTextDivHeight = $('.winemaker .text').height();
-            //         var pad = 0;
-            //         if (makerTextDivHeight > makerImageDivHeight) {
-            //           pad = (makerTextDivHeight - makerImageDivHeight) / 2;
-            //           makerImageDiv.css("padding-top", pad);
-            //         } else {
-            //           pad = (makerImageDivHeight - makerTextDivHeight) / 2;
-            //           makerTextDiv.css("padding-top", pad);
-            //         }
-            //         console.log('resize about');
-            //       }
-            //     }, 100);
-            //   });
+            // ABOUT
+            var about = $('#about');
+            if(about.length > 0)
+              about.imagesLoaded( function() {
+                var makerImageDiv = $('.winemaker .image');
+                var makerImageDivHeight = makerImageDiv.height();
+                var makerTextDiv = $('.winemaker .text');
+                var makerTextDivHeight = $('.winemaker .text').height();
+                if (makerTextDivHeight > makerImageDivHeight) {
+                  var pad = (makerTextDivHeight - makerImageDivHeight) / 2;
+                  makerImageDiv.css("padding-top", pad);
+                  setTimeout(function(){
+                    makerImageDiv.fadeTo(400, 1);
+                    makerTextDiv.fadeTo(400, 1);
+                  }, 100);
+                } else {
+                  var pad = (makerImageDivHeight - makerTextDivHeight) / 2;
+                  makerTextDiv.css("padding-top", pad);
+                  setTimeout(function(){
+                    makerImageDiv.fadeTo(400, 1);
+                    makerTextDiv.fadeTo(400, 1);
+                  }, 100);
+                }
+                window.onresize = debounce(function(){
+                  if ($(window).width() != windowWidth) {
+                    var makerImageDiv = $('.winemaker .image');
+                    var makerImageDivHeight = makerImageDiv.height();
+                    var makerTextDiv = $('.winemaker .text');
+                    var makerTextDivHeight = $('.winemaker .text').height();
+                    var pad = 0;
+                    if (makerTextDivHeight > makerImageDivHeight) {
+                      pad = (makerTextDivHeight - makerImageDivHeight) / 2;
+                      makerImageDiv.css("padding-top", pad);
+                    } else {
+                      pad = (makerImageDivHeight - makerTextDivHeight) / 2;
+                      makerTextDiv.css("padding-top", pad);
+                    }
+                    console.log('resize about');
+                  }
+                }, 100);
+              });
 
             // CONTACT
             var contact = $('#contact');
@@ -158,6 +158,13 @@
               if (winHeight >= 902) {
                 $('.footer-wrapper').addClass('fixed');
               }
+              window.onresize = debounce(function(){
+                if ($(window).width() != windowWidth) {
+                  if (winHeight >= 902) {
+                    $('.footer-wrapper').addClass('fixed');
+                  }
+                }
+              }, 100);
 
 
 
