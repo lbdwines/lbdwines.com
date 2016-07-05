@@ -12,7 +12,10 @@
 main {
   text-align: left;
   @include container();
-  @include media($s-up) {
+  @include media($s) {
+    @include pad(0);
+  }
+  @include media($l) {
     @include pad(1rem);
   }
   @include media($xl-up) {
