@@ -161,7 +161,11 @@
               var winHeight = $(window).height();
               // console.log(winHeight);
               if (winHeight >= 902) {
-                $('.footer-wrapper').addClass('fixed');
+                setTimeout(function(){
+                  $('.footer-wrapper').addClass('fixed');
+                }, 500);
+              } else {
+                $('.footer-wrapper').addClass('static');
               }
               window.onresize = debounce(function(){
                 var winHeight = $(window).height();
@@ -193,7 +197,7 @@
       blacklist: '.no-smoothState',
       debug: true,
       prefetch: true,
-      cacheLength: 4,
+      cacheLength: 5,
       onStart: {
         duration: 250, // Duration of our animation
         render: function ($container) {

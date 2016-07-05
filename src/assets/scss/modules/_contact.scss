@@ -103,13 +103,32 @@
     }
   }
 
- // sticky footer
+   // sticky footer
+   .footer-wrapper {
+      @include media($l-up){
+        opacity: 0;
+      }
+   }
+
+   .footer-wrapper.static {
+      // fade in
+      animation-duration: 0.25s;
+      transition-timing-function: ease-in;
+      animation-fill-mode: both;
+      animation-name: fadeIn;
+   }
+
   .footer-wrapper.fixed {
     @include media($l-up){
       position: absolute;
       bottom: 0;
       left: 0;
       right: 0;
+      // fade in
+      animation-duration: 0.25s;
+      transition-timing-function: ease-in;
+      animation-fill-mode: both;
+      animation-name: fadeIn;
     }
   }
 
