@@ -22,6 +22,7 @@ gulp.task('scripts', () =>
     'node_modules/jquery/dist/jquery.js',
     'node_modules/enquire.js/dist/enquire.js',
     'src/assets/javascript/flickity.min.js',
+    'src/assets/javascript/jquery.accordion.js',
     'src/assets/javascript/kibo.min.js',
     'src/assets/javascript/imagesloaded.pkgd.min.js',
     'src/assets/javascript/vendor.js',
