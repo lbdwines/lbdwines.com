@@ -159,12 +159,13 @@
                 $('.footer-wrapper').addClass('fixed');
               }
               window.onresize = debounce(function(){
-                if ($(window).width() != windowWidth) {
-                  if (winHeight >= 902) {
-                    $('.footer-wrapper').addClass('fixed');
-                  }
+                var winHeight = $(window).height();
+                if (winHeight >= 902) {
+                  $('.footer-wrapper').addClass('fixed');
+                } else if (winHeight < 902) {
+                  $('.footer-wrapper').removeClass('fixed');
                 }
-              }, 100);
+              }, 300);
 
 
 
