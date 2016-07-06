@@ -21,7 +21,7 @@
 
     // nav menu
     var menuToggle = $("#js-mobile-menu").unbind();
-    $("#js-navigation-menu").removeClass("show");
+    // $("#js-navigation-menu").removeClass("show");
 
     menuToggle.on("click", function(e) {
       e.preventDefault();
@@ -48,7 +48,7 @@
     // eraseCookie('jqverify');
     setTimeout(function(){
       eraseCookie('jqverify');
-    }, 2000);
+    }, 5000);
 
 
     if (!readCookie( agecookie)) {
