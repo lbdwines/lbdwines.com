@@ -149,27 +149,54 @@
             @include span-columns(4 of 5);
           }
         }
-        .shop {
-          @include media($s){}
-          @include media($l){}
-          float: left;
-          margin-top: 2rem;
-          .store {
-            @include media($s){}
-            @include media($l){}
+
+        .store {
+          @include transition(all .2s ease);
+          margin-top: .5rem;
+          // margin-left: 27px;
+          // margin-right: 27px;
+          padding: 1em 1em;
+          width: 230px;
+          background-color: transparent;
+          border: 3px solid #dbb7bb;
+          border-radius: 0px;
+          &:hover {
             @include transition(all .2s ease);
-            margin-top: .5rem;
-            padding: 1em 1em;
-            width: 230px;
-            background-color: transparent;
-            border: 3px solid #dbb7bb;
-            border-radius: 0px;
-            &:hover {
+            opacity: .7;
+            color: #000000;
+          }
+        }
+
+        .shop {
+          @include media($s){
+            text-align: center;
+          }
+          @include media($l){
+            float: left;
+            margin-top: 2rem;
+          }
+          .store {
+            @include media($s){
               @include transition(all .2s ease);
-              opacity: .7;
-              color: #000000;
+              padding: 1em 1em;
+              margin-top: 82px;
+              margin-bottom: 90px;
+              width: 230px;
+              background-color: transparent;
+              border: 3px solid #dbb7bb;
+              border-radius: 0px;
+              &:hover {
+                @include transition(all .2s ease);
+                opacity: .7;
+                color: #000000;
+              }
+            }
+            @include media($l){
+              margin-top: .5rem;
             }
           }
+
+
         }
       }
 
@@ -192,9 +219,20 @@
       margin-top: 6rem;
     }
     h2 {
-      text-align: left;
-      margin-top: 22px;
-      margin-bottom: 36px;
+      @include media($s){
+        @include pad(0 2rem);
+        padding-top: 45px;
+        margin-bottom: 45px;
+        border-top: 2px solid #f2f2f2;
+      }
+      @include media($l){
+        @include pad(0);
+        text-align: left;
+        margin-top: 22px;
+        margin-bottom: 36px;
+        border-top: 0px;
+      }
+
     }
     h5 {
       margin-top: 12px !important;
