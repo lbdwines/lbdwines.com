@@ -1,58 +1,99 @@
 .wine {
 
   section.featured {
-    @include media($l-up){
+
+
       margin-top: 108px;
       .info {
-        @include span-columns(5);
-        .name, .description, .notes, .varietal {
-          @include span-columns(5 of 5);
-          // padding-top: 1rem;
-          // padding-bottom: 1rem;
-          border-bottom: 2px solid #f2f2f2;
+        @include media($s){
+          .name, .description, .notes, .varietal {
+            border-bottom: 2px solid #f2f2f2;
+          }
         }
+        @include media($l){
+          @include span-columns(5);
+          .name, .description, .notes, .varietal {
+            @include span-columns(5 of 5);
+            // padding-top: 1rem;
+            // padding-bottom: 1rem;
+          }
+        }
+
+
         .name {
           padding-bottom: 2rem;
-          h3 {
-            line-height: 1.2;
-          }
-          h4 {
-            margin-top: .8rem;
-          }
-        }
-        .description {
-          padding-top: 1rem;
-          p {
-            line-height: 1.5;
-          }
-        }
-        .notes {
-          h4 {
-            margin-bottom: 0px;
-            padding-top: 1rem;
-            padding-bottom: 1rem;
-          }
-          p {
-            margin: 0px;
-            line-height: 1.5;
-            &:last-of-type {
-              margin-bottom: 1em;
+          @include media($s){
+            h3 {
+              text-align: center;
+              line-height: 1.2;
+              margin-top: 45px;
+              margin-bottom: 16px;
+
             }
           }
+          @include media($l){
+            h3 {
+              text-align: left;
+              margin-bottom: 0px;
+              h4 {
+                margin-top: .8rem;
+              }
+            }
+          }
+
+        }
+        .description {
+          @include media($s){}
+          @include media($l){
+            padding-top: 1rem;
+            p {
+              line-height: 1.5;
+            }
+          }
+
+        }
+        .notes {
+          @include media($s){}
+          @include media($l){
+            h4 {
+              margin-bottom: 0px;
+              padding-top: 1rem;
+              padding-bottom: 1rem;
+            }
+            p {
+              margin: 0px;
+              line-height: 1.5;
+              &:last-of-type {
+                margin-bottom: 1em;
+              }
+            }
+          }
+
         }
         .varietal {
-          h4 {
-            padding-top: 1rem;
-            padding-bottom: 1rem;
+          @include media($s){}
+          @include media($l){
+            h4 {
+              padding-top: 1rem;
+              padding-bottom: 1rem;
+            }
           }
+
         }
         .wrapper {
-          @include span-columns(4 of 5);
+          @include media($s){}
+          @include media($l){
+            @include span-columns(4 of 5);
+          }
         }
         .shop {
+          @include media($s){}
+          @include media($l){}
           float: left;
           margin-top: 2rem;
           .store {
+            @include media($s){}
+            @include media($l){}
             @include transition(all .2s ease);
             margin-top: .5rem;
             padding: 1em 1em;
@@ -68,12 +109,19 @@
           }
         }
       }
+
       .image  {
-        @include span-columns(6);
-        @include shift(1);
-        text-align: right;
+        @include media($s){
+
+        }
+        @include media($l){
+          @include span-columns(6);
+          @include shift(1);
+          text-align: right;
+        }
+
       }
-    }
+
   }
 
   section.all {

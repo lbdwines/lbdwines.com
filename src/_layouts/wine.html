@@ -6,6 +6,11 @@ layout: default
 
   <section class="featured">
     <div class="container">
+
+      <div class="image mobile">
+        <img src="{{ page.image_path }}" alt="">
+      </div>
+
       <div class="info">
         <div class="name">
           <h3>{{ page.name }}</h3>
@@ -43,21 +48,6 @@ layout: default
 
           </div>
 
-
-
-       <!--  <div class="notes">
-          <h4>technical notes</h4>
-          <p>Total Acidity: {{ page.total_acidity }}</p>
-          <p>pH: {{ page.ph }}</p>
-          <p>Residual Sugar: {{ page.residual_sugar }}</p>
-          <p>alcohol: {{ page.alcohol }}</p>
-        </div>
-        <div class="varietal">
-          <h4>varietal breakdown</h4>
-          <div class="wrapper">
-            <p>{{ page.varietal_breakdown }}</p>
-          </div>
-        </div> -->
         {% if page.purchase_link %}
         <div class="shop">
           <a target="_blank" href="{{ page.purchase_link }}"><button class="store">shop online</button></a>
@@ -66,7 +56,7 @@ layout: default
 
 
       </div>
-      <div class="image">
+      <div class="image desktop">
         <img src="{{ page.image_path }}" alt="">
       </div>
     </div>
