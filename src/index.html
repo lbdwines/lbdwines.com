@@ -2,19 +2,19 @@
 layout: default
 class: home
 top_image:
-  image_path: https://placehold.it/1353x760/cccccc/cccccc?text=fpo
+  image_path: https://placehold.it/2030x1140/cccccc/cccccc?text=fpo
 favorites:
-  image_path: https://placehold.it/548x760/cccccc/cccccc?text=fpo
+  image_path: https://placehold.it/822x1140/cccccc/cccccc?text=fpo
 middle_image:
-  image_path: https://placehold.it/1353x760/cccccc/cccccc?text=fpo
+  image_path: https://placehold.it/2030x1140/cccccc/cccccc?text=fpo
 quote:
-  image_path: https://placehold.it/318x270/cccccc/cccccc?text=fpo
+  image_path: https://placehold.it/477x405/cccccc/cccccc?text=fpo
 wines:
   - chardonnay
   - pinot-noir
   - cabernet-sauvignon
 bottom-image:
-  image_path: https://placehold.it/1353x760/cccccc/cccccc?text=fpo
+  image_path: https://placehold.it/2030x1140/cccccc/cccccc?text=fpo
 ---
 
 
@@ -51,7 +51,7 @@ bottom-image:
 
 <section id="home-favorites" class="text-image favorites">
   <div class="container">
-    <div class="text">
+    <div class="text desktop">
       <div class="wrapper">
         <h4>all your favorites</h4>
         <h3>Anything but basic.</h3>
@@ -60,6 +60,14 @@ bottom-image:
       </div>
     </div>
     <div class="image"><img id="favImage" src="{{ page.favorites.image_path }}" alt=""></div>
+    <div class="text mobile">
+      <div class="wrapper">
+        <h4>all your favorites</h4>
+        <h3>Anything but basic.</h3>
+        <p class="graph">Good taste is your call. It's something you wear proudly and pour boldly. It's your own personal flavor. And it looks amazing.</p>
+        <a href="/wines"><button class="more">Learn More</button></a>
+      </div>
+    </div>
   </div>
 </section>
 
@@ -112,7 +120,10 @@ bottom-image:
 
 <section class="cta">
   <div class="container">
-    <div class="buttons">
+  <div class="buttons mobile">
+    <a href="/wines"><button class="all">view all</button></a><br /><a target="_blank" href="http://locator.banfi-hq.com/WineLocator/default.aspx?BCode=855"><button class="store no-smoothState">find a store</button></a>
+  </div>
+    <div class="buttons desktop">
       <a href="/wines"><button class="all">view all</button></a><a target="_blank" href="http://locator.banfi-hq.com/WineLocator/default.aspx?BCode=855"><button class="store no-smoothState">find a store</button></a>
     </div>
   </div>

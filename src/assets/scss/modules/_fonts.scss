@@ -9,7 +9,12 @@ h1 {
 
 h2 {
   font-family: ITCBodoni72Com-BookItalic, serif;
-  font-size: 24px;
+  @include media($s){
+    font-size: 32px;
+  }
+  @include media($l){
+    font-size: 24px;
+  }
   font-weight: normal;
   text-align: center;
   letter-spacing: 1px;
@@ -18,9 +23,15 @@ h2 {
 
 h3  {
   font-family: ITCBodoni72Com-Bold, serif;
-  font-size: 34px;
+  @include media($s){
+    font-size: 38px;
+    text-align: center;
+  }
+  @include media($l){
+    font-size: 34px;
+    text-align: left;
+  }
   text-transform: none;
-  text-align: left;
   letter-spacing: 2px;
   margin: 0px;
   color: #000000;
@@ -28,21 +39,42 @@ h3  {
 
 h4 {
   font-family: AvenirLTStd-Black, sans-serif;
-  font-size: 12px;
+  @include media($s){
+    font-size: 15px;
+    text-align: center;
+  }
+  @include media($l){
+    font-size: 12px;
+    text-align: left;
+  }
   text-transform: uppercase;
-  text-align: left;
   letter-spacing: 1px;
   margin: 0px;
   color: #000000;
+
 }
 
 h5 {
   font-family: AvenirLTStd-Black, sans-serif;
-  font-size: 10px;
+  @include media($s){
+    font-size: 14px;
+  }
+  @include media($l){
+    font-size: 10px;
+  }
   text-transform: uppercase;
   text-align: center;
   letter-spacing: 1px;
   color: #000000;
+}
+
+p {
+  @include media($s){
+    font-size: 18px;
+  }
+  @include media($l){
+    font-size: 16px;
+  }
 }
 
 button {
