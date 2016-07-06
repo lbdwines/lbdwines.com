@@ -23,6 +23,9 @@
     z-index: 1000;
   }
   img {
+    @include media($s-up) {
+        width: 200px;
+    }
     @include media($l-up) {
         width: 318px;
     }
@@ -31,20 +34,43 @@
     text-align: center;
     background: #f3f3f3;
     bottom: 0;
-    height: 330px;
+    @include media($s){
+      height: 220px;
+    }
+    @include media($l){
+      height: 330px;
+    }
     /* Note: this has to be a set width */
     left: 0;
     margin: auto;
-    padding: 4rem 4rem;
+    @include media($s){
+      padding: 2rem 1rem;
+    }
+    @include media($l){
+      padding: 4rem 4rem;
+    }
     position: absolute;
     right: 0;
     top: 0;
-    width: 550px;
+    @include media($s){
+      width: 275px;
+    }
+    @include media($l){
+      width: 550px;
+    }
     /* Note: this has to be a set height */
     z-index: 1001;
     p {
-      width: 60%;
-      margin: 2rem auto;
+      @include media($s){
+        font-size: 15px;
+        width: 80%;
+        margin: 1rem auto;
+      }
+      @include media($l){
+        font-size: 18px;
+        width: 60%;
+        margin: 2rem auto;
+      }
     }
   }
   .submit {
@@ -53,6 +79,12 @@
   }
   h5 {
     margin: 0;
+    @include media($s){
+      font-size: 10px;
+    }
+    @include media($l){
+      font-size: 10px;
+    }
   }
   .formsubmit {
     @include transition(all .2s ease);
