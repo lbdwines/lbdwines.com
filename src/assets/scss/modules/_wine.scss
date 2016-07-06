@@ -7,12 +7,15 @@
       .info {
         @include media($s){
           .name, .description, .notes, .varietal {
+            margin-left: 2rem;
+            margin-right: 2rem;
             border-bottom: 2px solid #f2f2f2;
           }
         }
         @include media($l){
           @include span-columns(5);
           .name, .description, .notes, .varietal {
+            margin-left: 0px;
             @include span-columns(5 of 5);
             // padding-top: 1rem;
             // padding-bottom: 1rem;
@@ -43,9 +46,13 @@
 
         }
         .description {
-          @include media($s){}
+          @include media($s){
+            padding-top: 25px;
+            padding-bottom: 25px;
+          }
           @include media($l){
             padding-top: 1rem;
+            padding-bottom: 0px;
             p {
               line-height: 1.5;
             }
@@ -53,8 +60,33 @@
 
         }
         .notes {
-          @include media($s){}
+          @include media($s){
+            .accordion {
+              cursor: pointer;
+              padding-top: 2rem;
+              padding-bottom: 2rem;
+            }
+            h4 {
+              text-align: left;
+              margin-bottom: 0px;
+              // padding-top: 2rem;
+              // padding-bottom: 2rem;
+            }
+
+            p {
+              margin: 0px;
+              line-height: 1.5;
+              &:first-of-type {
+                margin-top: 18px;
+              }
+            }
+          }
           @include media($l){
+            .accordion {
+              cursor: pointer;
+              padding-top: 0px;
+              padding-bottom: 0px;
+            }
             h4 {
               margin-bottom: 0px;
               padding-top: 1rem;
@@ -63,6 +95,9 @@
             p {
               margin: 0px;
               line-height: 1.5;
+              &:first-of-type {
+                margin-top: 0px;
+              }
               &:last-of-type {
                 margin-bottom: 1em;
               }
@@ -71,11 +106,39 @@
 
         }
         .varietal {
-          @include media($s){}
+          @include media($s){
+            .accordion {
+              cursor: pointer;
+              padding-top: 2rem;
+              padding-bottom: 2rem;
+            }
+            h4 {
+              text-align: left;
+            }
+            .wrapper {
+              margin-top: 18px;
+            }
+            p {
+              margin-top: 0px;
+              margin-bottom: 13px;
+            }
+          }
           @include media($l){
+            .accordion {
+              cursor: pointer;
+              padding-top: 0px;
+              padding-bottom: 0px;
+            }
             h4 {
               padding-top: 1rem;
               padding-bottom: 1rem;
+            }
+            .wrapper {
+              margin-top: 0px;
+            }
+            p {
+              margin-top: 0px;
+              margin-bottom: 1em;
             }
           }
 
@@ -193,9 +256,6 @@
 
   /* Requirements */
 
-  .accordion {
-    cursor: pointer;
-  }
 
   [data-accordion] [data-content] {
       overflow: hidden;
@@ -228,12 +288,17 @@
       content: "+";
       position: absolute;
       right: 10px;
-      top: 1rem;
-      font-size: 1rem;
-      font-weight: bold;
+      @include media($s){
+        top: 0;
+        font-size: 18px;
+      }
+      @include media($l){
+        top: 1rem;
+        font-size: 1rem;
+      }
       color: #000;
-      height: 15px;
-      width: 24px;
+      // height: 15px;
+      // width: 24px;
       // background: url('../images/down.png') center center no-repeat;
       // background-size: 50%;
   }
