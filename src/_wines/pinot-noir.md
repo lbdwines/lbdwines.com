@@ -7,7 +7,7 @@ ph: 3.43
 residual_sugar: 1.2 g/mL
 alcohol: 13.5% A.B.V
 varietal_breakdown: 98% Pinot Noir, 2% Other Complimentary Red Varietals
-image_path: https://placehold.it/639x809/cccccc/cccccc?text=fpo
+image_path: https://placehold.it/959x1214/cccccc/cccccc?text=fpo
 sort_order: 2
 purchase_link: https://placehold.it/800/e8117f/ffffff/?text=wine+for+sale
 ---
