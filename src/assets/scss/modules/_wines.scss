@@ -2,46 +2,93 @@
 
   section.headline {
     .inner {
+      @include media($s){
+        text-align: center;
+        padding-top: 72px;
+        h1 {
+          display: inline-block;
+          margin-top: 0px;
+          margin-bottom: 45px;
+          padding-bottom: 12px;
+          border-bottom: 6px solid #edd5d8;
+        }
+        p {
+          margin-top: 0px;
+          line-height: 1.5;
+          font-size: 20px;
+          max-width: 75%;
+          margin-left: auto;
+          margin-right: auto;
+        }
+      }
       @include media($l-up){
         @include span-columns(6);
         @include shift(3);
+        text-align: center;
         margin-top: 108px;
         text-align: center;
-      }
-      h1 {
-        display: inline-block;
-        margin-top: 0px;
-        margin-bottom: 1.8rem;
-        padding-bottom: 2px;
-        border-bottom: 6px solid #edd5d8;
-      }
-      p {
-        margin-top: 0px;
-        line-height: 1.5;
+        h1 {
+          display: inline-block;
+          margin-top: 0px;
+          margin-bottom: 1.8rem;
+          padding-bottom: 2px;
+          border-bottom: 6px solid #edd5d8;
+        }
+        p {
+          margin-top: 0px;
+          line-height: 1.5;
+        }
       }
     }
   }
 
   section.products {
+    @include media($s){
+      margin-top: 50px;
+    }
     @include media($l-up){
       margin-top: 74px;
     }
     h3 {
       text-align: center;
-      margin-bottom: 72px;
+      @include media($s){
+        margin-bottom: 45px;
+      }
+      @include media($l){
+        margin-bottom: 72px;
+      }
     }
     h2 {
-      margin-top: 22px;
+      @include media($s){
+        margin-top: 45px;
+      }
+      @include media($l){
+        margin-top: 22px;
+      }
       margin-bottom: 0px;
     }
     h5 {
-      margin-top: 12px !important;
-      margin-bottom: 0px;
+      @include media($s){
+        margin-top: 18px;
+        margin-bottom: 90px;
+      }
+      @include media($l){
+        margin-top: 12px !important;
+        margin-bottom: 1rem;
+      }
     }
     .product {
-      @include span-columns(4);
-      margin-bottom: 90px;
-      // opacity: 0;
+      @include media($s){
+        padding-left: 2rem;
+        padding-right: 2rem;
+      }
+      @include media($l){
+        @include span-columns(4);
+        padding-left: 0px;
+        padding-right: 0px;
+        margin-bottom: 90px;
+      }
+
       img {
         display: block;
       }
@@ -56,23 +103,38 @@
   }
 
   section.grid1 {
-    .product:nth-child(3n) {
-      margin-right: 0;
+    @include media($l){
+      .product:nth-child(3n) {
+        margin-right: 0;
+      }
     }
     img.breakout {
-      margin-bottom: 41px;
+      @include media($s){
+        margin-bottom: 57px;
+      }
+      @include media($l){
+        margin-bottom: 41px;
+      }
     }
   }
 
   section.grid2 {
-    .product:nth-child(3n) {
-      margin-right: 0;
+    @include media($l){
+      .product:nth-child(3n) {
+        margin-right: 0;
+      }
+      .product:last-child {
+        @include shift(1);
+      }
     }
-    .product:last-child {
-      @include shift(1);
-    }
+
     img.breakout {
-      margin-bottom: 41px;
+      @include media($s){
+        margin-bottom: 57px;
+      }
+      @include media($l){
+        margin-bottom: 41px;
+      }
     }
   }
 
@@ -84,6 +146,32 @@
   }
 
   section.cta {
+    @include media($s-up){
+      margin-top: 18px;
+      margin-bottom: 108px;
+      .buttons {
+        @include transition(all .2s ease);
+        text-align: center;
+        a {
+          @include transition(all .2s ease);
+        }
+        .store {
+          margin-top: .5rem;
+          // margin-left: 27px;
+          // margin-right: 27px;
+          padding: 1em 1em;
+          width: 230px;
+          background-color: transparent;
+          border: 3px solid #dbb7bb;
+          border-radius: 0px;
+          &:hover {
+            @include transition(all .2s ease);
+            opacity: .7;
+            color: #000000;
+          }
+        }
+      }
+    }
     @include media($l-up){
       margin-top: 74px;
       .buttons {
