@@ -26,6 +26,7 @@
         @include shift(3);
         text-align: center;
         margin-top: 108px;
+        padding-top: 0px;
         text-align: center;
         h1 {
           display: inline-block;
@@ -37,6 +38,7 @@
         p {
           margin-top: 0px;
           line-height: 1.5;
+          max-width: 100%;
         }
       }
     }
