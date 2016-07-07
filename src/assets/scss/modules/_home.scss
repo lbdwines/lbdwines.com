@@ -183,6 +183,7 @@
         }
 
         @include media($l){
+          text-align: left;
           animation: fadein 1s;
           @include span-columns(4);
           @include shift(1);
@@ -366,7 +367,7 @@
         }
         .store {
           @include transition(all .2s ease);
-          margin-top: .5rem;
+          margin-top: 0;
           // margin-left: 27px;
           // margin-right: 27px;
           padding: 1em 1em;
