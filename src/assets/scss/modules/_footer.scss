@@ -226,6 +226,23 @@ footer {
     }
   }
 
+  .terms {
+    @include media($s){
+      margin-right: 1.5rem;
+    }
+    @include media($l){
+      margin-right: 0;
+    }
+  }
+  .supply {
+    @include media($s){
+      margin-left: 1.5rem;
+    }
+    @include media($l){
+      margin-left: 0;
+    }
+  }
+
 
 
 }
