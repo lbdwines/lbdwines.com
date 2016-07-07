@@ -2,34 +2,72 @@
 
   section.headline {
     .inner {
+      @include media($s){
+        text-align: center;
+        padding-top: 72px;
+        h1 {
+          display: inline-block;
+          margin-top: 0px;
+          margin-bottom: 45px;
+          padding-bottom: 12px;
+          border-bottom: 6px solid #edd5d8;
+        }
+        p {
+          margin-top: 0px;
+          line-height: 1.5;
+          font-size: 20px;
+          max-width: 75%;
+          margin-left: auto;
+          margin-right: auto;
+        }
+      }
       @include media($l-up){
         @include span-columns(6);
         @include shift(3);
-        margin-top: 108px;
         text-align: center;
-      }
-      h1 {
-        display: inline-block;
-        margin-top: 0px;
-        margin-bottom: 1.8rem;
-        padding-bottom: 2px;
-        border-bottom: 6px solid #edd5d8;
-      }
-      p {
-        margin-top: 0px;
-        line-height: 1.5;
+        margin-top: 108px;
+        padding-top: 0px;
+        text-align: center;
+        h1 {
+          display: inline-block;
+          margin-top: 0px;
+          margin-bottom: 1.8rem;
+          padding-bottom: 2px;
+          border-bottom: 6px solid #edd5d8;
+        }
+        p {
+          margin-top: 0px;
+          line-height: 1.5;
+          max-width: 100%;
+        }
       }
     }
   }
 
   section.partners {
     clear: both;
+    @include media($s-up){
+      padding-top: 72px;
+      text-align: center;
+    }
     @include media($l-up){
+      text-align: left;
       padding-top: 90px;
     }
     .partner {
-      @include span-columns(4);
-      margin-bottom: 90px;
+      @include media($s){
+        margin-bottom: 90px;
+        &:last-of-type {
+          margin-bottom: 108px;
+        }
+      }
+      @include media($l-up){
+        @include span-columns(4);
+        margin-bottom: 90px;
+        &:last-of-type {
+          margin-bottom: 90px;
+        }
+      }
       a {
         @include transition(all .2s ease);
         &:hover {
@@ -39,7 +77,15 @@
       img {
         @include transition(all .2s ease);
         display: block;
-        margin-bottom: 45px;
+        @include media($s){
+          margin-left: auto;
+          margin-right: auto;
+          margin-bottom: 90px;
+        }
+        @include media($l){
+          margin-bottom: 45px;
+        }
+
       }
       a img:hover {
         @include transition(all .2s ease);
@@ -49,10 +95,21 @@
 
       }
       p {
-        @include span-columns(3 of 4);
-        line-height: 1.5;
-        margin-top: 1em;
-        margin-bottom: 1em;
+        @include media($s){
+          margin-top: 27px;
+          margin-bottom: 2em;
+          margin-left: auto;
+          margin-right: auto;
+          line-height: 1.5;
+          max-width: 75%;
+        }
+        @include media($l-up){
+          @include span-columns(3 of 4);
+          margin-top: 1em;
+          margin-bottom: 1em;
+          max-width: 100%;
+        }
+
       }
       p a {
         // font-weight: bold;
