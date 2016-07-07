@@ -65,18 +65,18 @@
         event.returnValue = false;
       }
 
-      createCookie( agecookie, 1, 30); // expire in 30 days
+      createCookie( agecookie, 1, 1); // expire in 1 hour
 
       jQuery(agemodal).fadeOut();
       jQuery(modalContent).fadeIn();
       return true;
     });
 
-    function createCookie(name,value,days) {
+    function createCookie(name,value,hours) {
       var date = new Date();
       var expires = "";
-      if (days) {
-          date.setTime(date.getTime()+(days*24*60*60*1000));
+      if (hours) {
+          date.setTime(date.getTime()+(hours*60*60*1000));
           expires = "; expires="+date.toGMTString();
       }
       document.cookie = name+"="+value+expires+"; path=/";
