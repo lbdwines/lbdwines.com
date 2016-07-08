@@ -53,11 +53,13 @@
     // }, 5000);
 
 
-    if (!readCookie( agecookie)) {
+    if (!readCookie(agecookie)) {
         jQuery(agemodal).fadeIn();
+        console.log('no cookie');
     } else {
         jQuery(agemodal).fadeOut();
         jQuery(modalContent).fadeIn();
+        console.log('cookie');
     }
 
     jQuery(formsubmit).on('click', function(event){
