@@ -6,8 +6,13 @@
     @include pad(0 1rem);
   }
   a {
+    @include transition(all .2s ease);
     color: #000000;
     text-decoration: none;
+    &:hover {
+      @include transition(all .2s ease);
+      opacity: .7;
+    }
   }
   .search {
     @include media($s){
@@ -209,10 +214,15 @@ footer {
         line-height: 10px;
         @include vertical-align;
         a {
+          @include transition(all .2s ease);
           color: white;
           text-transform: uppercase;
           letter-spacing: 2px;
           text-decoration: none;
+          &:hover {
+            @include transition(all .2s ease);
+            opacity: .7;
+          }
         }
       }
     }
