@@ -119,6 +119,7 @@
               margin-top: 18px;
             }
             p {
+              line-height: 1.5;
               margin-top: 0px;
               margin-bottom: 13px;
             }
@@ -391,10 +392,22 @@
         font-size: 1rem;
       }
       color: #000;
-      // height: 15px;
-      // width: 24px;
-      // background: url('../images/down.png') center center no-repeat;
-      // background-size: 50%;
+  }
+
+  [data-accordion].open > [data-control]:after {
+      content: "–";
+      position: absolute;
+      right: 10px;
+      @include media($s){
+        top: 0;
+        right: 11px;
+        font-size: 18px;
+      }
+      @include media($l){
+        top: 1rem;
+        font-size: 1rem;
+      }
+      color: #000;
   }
 
 }
