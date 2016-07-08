@@ -49,13 +49,13 @@
           @include media($s){
             padding-top: 25px;
             padding-bottom: 25px;
+            p {
+              line-height: 1.5;
+            }
           }
           @include media($l){
             padding-top: 1rem;
             padding-bottom: 0px;
-            p {
-              line-height: 1.5;
-            }
           }
 
         }
