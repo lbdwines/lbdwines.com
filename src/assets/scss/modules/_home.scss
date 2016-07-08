@@ -109,7 +109,7 @@
         @include span-columns(5);
         @include shift(1);
         .wrapper {
-          @include span-columns(3 of 5);
+          @include span-columns(4 of 5);
           @include vertical-align;
           // opacity: 0;
           h3 {
@@ -189,7 +189,7 @@
           @include shift(1);
           .wrapper {
             animation: fadein 1s;
-            @include span-columns(3 of 4);
+            // @include span-columns(3 of 4);
             @include vertical-align;
             h3 {
               margin-top: .75rem;
