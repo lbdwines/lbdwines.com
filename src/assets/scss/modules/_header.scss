@@ -67,18 +67,31 @@ header.navigation {
     }
   }
 
-  // Mobile view
-
-  .navigation-menu-button {
-    color: #ffc0cb;
-    display: block;
-    z-index: 9999;
+  // burger
+  button.hamburger {
+    &:active, &:focus {
+      outline: none !important;
+    }
+  }
+  .hamburger {
+    @include media($horizontal-bar-mode){
+      display: none;
+    }
     float: right;
-    // line-height: $centered-navigation-height;
+    padding: 15px 15px;
+    display: inline-block;
+    cursor: pointer;
+    transition-property: opacity, -webkit-filter;
+    transition-property: opacity, filter;
+    transition-property: opacity, filter, -webkit-filter;
+    transition-duration: 0.15s;
+    transition-timing-function: linear;
+    font: inherit;
+    background-color: transparent;
+    text-transform: none;
+    border: 0;
     margin: 0;
-    padding-right: $navigation-submenu-padding;
-    text-decoration: none;
-    text-transform: uppercase;
+    overflow: visible;
     position: relative;
     right: 0px;
     top: 5px;
@@ -87,54 +100,75 @@ header.navigation {
     padding: 0;
     width: 48px;
     height: 48px;
-    font-size: 0;
-    text-indent: -9999px;
-    appearance: none;
-    box-shadow: none;
-    border-radius: none;
-    border: none;
-    cursor: pointer;
-    transition: background 0.3s;
-
-    span {
-      display: block;
-      position: absolute;
-      top: 22px;
-      left: 9px;
-      right: 9px;
-      height: 2px;
-      background: #ffc0cb;
-    }
-
-    span::before, span::after {
-      position: absolute;
-      display: block;
-      left: 0;
-      width: 100%;
-      height: 2px;
-      background-color: #ffc0cb;
-      content: "";
-    }
-
-    span::before {
-      top: -9px;
-    }
-
-    span::after {
-      bottom: -9px;
-    }
-
-
-
-    @include media ($horizontal-bar-mode) {
-      display: none;
-    }
-
-    &:focus,
-    &:hover {
-      color: $navigation-color-hover;
-    }
   }
+    .hamburger:hover {
+      opacity: 0.7; }
+
+  .hamburger-box {
+    width: 40px;
+    height: 24px;
+    display: inline-block;
+    position: relative; }
+
+  .hamburger-box:hover, .hamburger-box:focus {
+    background-color: transparent;
+    outline: none;
+  }
+
+  .hamburger-inner {
+    display: block;
+    top: 50%;
+    margin-top: -2px; }
+    .hamburger-inner, .hamburger-inner::before, .hamburger-inner::after {
+      width: 40px;
+      height: 4px;
+      background-color: #ffc0cb;
+      border-radius: 4px;
+      position: absolute;
+      transition-property: -webkit-transform;
+      transition-property: transform;
+      transition-property: transform, -webkit-transform;
+      transition-duration: 0.15s;
+      transition-timing-function: ease; }
+    .hamburger-inner::before, .hamburger-inner::after {
+      content: "";
+      display: block; }
+    .hamburger-inner::before {
+      top: -10px; }
+    .hamburger-inner::after {
+      bottom: -10px; }
+
+  /*
+   * Squeeze
+   */
+  .hamburger--squeeze .hamburger-inner {
+    transition-duration: 0.1s;
+    transition-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19); }
+    .hamburger--squeeze .hamburger-inner::before {
+      transition: top 0.1s 0.14s ease, opacity 0.1s ease; }
+    .hamburger--squeeze .hamburger-inner::after {
+      transition: bottom 0.1s 0.14s ease, -webkit-transform 0.1s cubic-bezier(0.55, 0.055, 0.675, 0.19);
+      transition: bottom 0.1s 0.14s ease, transform 0.1s cubic-bezier(0.55, 0.055, 0.675, 0.19);
+      transition: bottom 0.1s 0.14s ease, transform 0.1s cubic-bezier(0.55, 0.055, 0.675, 0.19), -webkit-transform 0.1s cubic-bezier(0.55, 0.055, 0.675, 0.19); }
+
+  .hamburger--squeeze.is-active .hamburger-inner {
+    -webkit-transform: rotate(45deg);
+            transform: rotate(45deg);
+    transition-delay: 0.14s;
+    transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1); }
+    .hamburger--squeeze.is-active .hamburger-inner::before {
+      top: 0;
+      opacity: 0;
+      transition: top 0.1s ease, opacity 0.1s 0.14s ease; }
+    .hamburger--squeeze.is-active .hamburger-inner::after {
+      bottom: 0;
+      -webkit-transform: rotate(-90deg);
+              transform: rotate(-90deg);
+      transition: bottom 0.1s ease, -webkit-transform 0.1s 0.14s cubic-bezier(0.215, 0.61, 0.355, 1);
+      transition: bottom 0.1s ease, transform 0.1s 0.14s cubic-bezier(0.215, 0.61, 0.355, 1);
+      transition: bottom 0.1s ease, transform 0.1s 0.14s cubic-bezier(0.215, 0.61, 0.355, 1), -webkit-transform 0.1s 0.14s cubic-bezier(0.215, 0.61, 0.355, 1); }
+
+
 
   // Nav menu
 
