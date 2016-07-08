@@ -50,7 +50,7 @@
       padding-top: 72px;
       text-align: center;
     }
-    @include media(min-width 600px){
+    @include media(min-width 560px){
       text-align: left;
       padding-top: 90px;
     }
@@ -61,7 +61,7 @@
           margin-bottom: 108px;
         }
       }
-      @include media(min-width 600px max-width 859px){
+      @include media(min-width 560px max-width 859px){
         @include span-columns(6);
         margin-bottom: 90px;
         h4 {
@@ -117,7 +117,7 @@
           line-height: 1.5;
           max-width: 75%;
         }
-        @include media(min-width 600px max-width 859px){
+        @include media(min-width 560px max-width 859px){
           max-width: 90%;
         }
         @include media($l-up){
