@@ -48,7 +48,11 @@
     @include media($s){
       margin-top: 50px;
     }
+    @include media(668px){
+      text-align: center;
+    }
     @include media($l-up){
+      text-align: left;
       margin-top: 74px;
     }
     h3 {
@@ -83,6 +87,12 @@
       @include media($s){
         padding-left: 2rem;
         padding-right: 2rem;
+      }
+      @include media(668px){
+        text-align: center;
+        max-width: 65%;
+        margin-left: auto;
+        margin-right: auto;
       }
       @include media($l){
         @include span-columns(4);
