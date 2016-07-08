@@ -56,6 +56,7 @@
     if (!readCookie( agecookie)) {
         jQuery(agemodal).fadeIn();
     } else {
+        jQuery(agemodal).fadeOut();
         jQuery(modalContent).fadeIn();
     }
 
