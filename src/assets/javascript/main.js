@@ -57,7 +57,7 @@
         jQuery(agemodal).fadeIn();
         console.log('no cookie');
     } else {
-        jQuery(agemodal).fadeOut();
+        jQuery(agemodal).hide();
         jQuery(modalContent).fadeIn();
         console.log('cookie');
     }
