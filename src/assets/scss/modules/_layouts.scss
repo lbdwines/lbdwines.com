@@ -18,7 +18,7 @@ main {
   @include media($l) {
     @include pad(1rem);
   }
-  @include media($xl-up) {
+  @include media(1400px) {
     @include pad(0);
   }
 }
@@ -30,7 +30,7 @@ header {
   @include media($s-up) {
     @include pad(0 1rem);
   }
-  @include media($xl-up) {
+  @include media(1400px) {
     @include pad(0);
   }
 }
