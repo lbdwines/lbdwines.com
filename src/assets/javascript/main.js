@@ -48,9 +48,9 @@
 
     // uncomment this line in development:
     // eraseCookie('jqverify');
-    setTimeout(function(){
-      eraseCookie('jqverify');
-    }, 5000);
+    // setTimeout(function(){
+    //   eraseCookie('jqverify');
+    // }, 5000);
 
 
     if (!readCookie( agecookie)) {

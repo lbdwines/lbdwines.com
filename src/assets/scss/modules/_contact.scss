@@ -1,4 +1,4 @@
-.contact {
+#contact {
 
   section.headline {
     @include media($s){
@@ -139,7 +139,9 @@
       }
     }
   }
+}
 
+#main {
    // sticky footer
    .footer-wrapper {
       @include media($l-up){
@@ -168,5 +170,4 @@
       animation-name: fadeIn;
     }
   }
-
 }
