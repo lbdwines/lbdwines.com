@@ -185,6 +185,36 @@
         @include media($l){
           text-align: left;
           animation: fadein 1s;
+          @include span-columns(5);
+          @include shift(1);
+          .wrapper {
+            animation: fadein 1s;
+            // @include span-columns(3 of 4);
+            @include vertical-align;
+            h3 {
+              margin-top: .75rem;
+            }
+            p {
+              line-height: 1.7;
+            }
+            button {
+              @include transition(all .2s ease);
+              margin-top: .5rem;
+              padding: 1.3em 1em;
+              width: 230px;
+              background-color: #eed5d8;
+              border-radius: 0px;
+              &:hover {
+                opacity: .7;
+                color: #000000;
+              }
+            }
+          }
+        }
+
+        @include media(1200px){
+          text-align: left;
+          animation: fadein 1s;
           @include span-columns(4);
           @include shift(1);
           .wrapper {
@@ -221,8 +251,15 @@
         margin-bottom: 90px;
       }
       @include media($l){
+        @include span-columns(4);
+        @include shift(1);
+        padding-left: 0px;
+        padding-right: 0px;
+        margin-bottom: 0px;
+      }
+      @include media(1000px){
         @include span-columns(5);
-        @include shift(2);
+        @include shift(1);
         padding-left: 0px;
         padding-right: 0px;
         margin-bottom: 0px;
