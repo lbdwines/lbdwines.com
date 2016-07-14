@@ -96,9 +96,13 @@
       }
       @include media($l){
         @include span-columns(4);
+        max-width: 100%;
         padding-left: 0px;
         padding-right: 0px;
         margin-bottom: 90px;
+        &.clear {
+          clear: left
+        }
       }
 
       img {
