@@ -9,7 +9,6 @@ varietal_breakdown: 78% Merlot, 4% Petite Sirah, 18% Other Complimentary Red Var
 image_path: /assets/images/wine.jpg
 sort_order: 4
 purchase_link: https://placehold.it/800/e8117f/ffffff/?text=wine+for+sale
-description:
 ---
 
 Plush texture and nuanced aromas of ripe black cherry, rich mocha and spicy plum before a seductive vanilla and oak finish.

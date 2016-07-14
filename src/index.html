@@ -5,8 +5,14 @@ top_image:
   image_path: /assets/images/home-3.jpg
 favorites:
   image_path: /assets/images/home-fav.jpg
+  headline: all your favorites
+  subhead: Anything but Basic.
+  text: Good taste is your call. It's something you wear proudly and pour boldly. It's your own personal flavor. And it looks amazing.
 winemaker:
   image_path: https://placehold.it/822x1140/cccccc/cccccc?text=fpo
+  headline: behind the scenes
+  subhead: The Winemaker
+  text: From harvesting and crushing to blending and aging, Margaret Leonardi makes sure every batch, every bottle, every sip of LBD looks and tastes its absolute best.
 middle_image:
   image_path: /assets/images/home-2.jpg
 quote:
@@ -56,18 +62,18 @@ description: Approachable, affordable, and delicious wines for every occasion.
   <div class="container">
     <div class="text desktop">
       <div class="wrapper">
-        <h4>all your favorites</h4>
-        <h3>Anything but basic.</h3>
-        <p class="graph">Good taste is your call. It's something you wear proudly and pour boldly. It's your own personal flavor. And it looks amazing.</p>
+        <h4>{{ page.favorites.headline }}</h4>
+        <h3>{{ page.favorites.subhead }}</h3>
+        <p class="graph">{{ page.favorites.text }}</p>
         <a href="/wines"><button class="more">Learn More</button></a>
       </div>
     </div>
     <div class="image"><img id="favImage" src="{{ page.favorites.image_path }}" alt=""></div>
     <div class="text mobile">
       <div class="wrapper">
-        <h4>all your favorites</h4>
-        <h3>Anything but basic.</h3>
-        <p class="graph">Good taste is your call. It's something you wear proudly and pour boldly. It's your own personal flavor. And it looks amazing.</p>
+        <h4>{{ page.favorites.headline }}</h4>
+        <h3>{{ page.favorites.subhead }}</h3>
+        <p class="graph">{{ page.favorites.text }}</p>
         <a href="/wines"><button class="more">Learn More</button></a>
       </div>
     </div>
@@ -85,9 +91,9 @@ description: Approachable, affordable, and delicious wines for every occasion.
     <div class="image"><img id="makerImage" src="{{ page.winemaker.image_path }}" alt=""></div>
     <div class="text">
       <div class="wrapper">
-        <h4>behind the scenes</h4>
-        <h3>The Winemaker</h3>
-        <p class="graph">From harvesting and crushing to blending and aging, Margaret Leonardi makes sure every batch, every bottle, every sip of LBD looks and tastes its absolute best.</p>
+        <h4>{{ page.winemaker.headline }}</h4>
+        <h3>{{ page.winemaker.subhead }}</h3>
+        <p class="graph">{{ page.winemaker.text }}</p>
         <a href="/about"><button class="more">Learn More</button></a>
       </div>
     </div>
