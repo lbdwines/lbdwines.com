@@ -2,7 +2,7 @@
 # Can be used in your theme by calling 'site.title' and so on
 title: Little Black Dress Wines
 description:
-url: http://ldbwines.com
+url: http://www.ldbwines.com
 
 collections:
   wines:
@@ -28,13 +28,13 @@ exclude: ['assets']
 # Same as the title etc for your site but can instead be
 # called by using 'site.author.name' and so on
 # NOTE: Don't use @ in front of your Twitter username
-author:
-  name: Ryan
-  email:
-  uri:
-  bio:
-  twitter:
-  github:
+# author:
+#   name:
+#   email:
+#   uri:
+#   bio:
+#   twitter:
+#   github:
 
 # _config.build.yml overwrites these options when you run `gulp build`
 # Enables future posts (posts with dates in the future) and drafts
@@ -46,22 +46,12 @@ lsi: false
 limit_posts: 10
 
 # Permalink structure and pagination options
-permalink: none
-paginate: 10
-paginate_path: 'page:num'
-excerpt_separator: '<!--more-->'
-
-# Markdown library and options
-markdown: redcarpet
-redcarpet:
-  extensions: ['no_intra_emphasis', 'tables', 'fenced_code_blocks', 'autolink', 'smart',
-              'strikethrough', 'superscript', 'underline', 'highlight', 'footnotes']
-highlighter: true
+# permalink: none
+# paginate: 10
+# paginate_path: 'page:num'
+# excerpt_separator: '<!--more-->'
 
 # Extending Jekyll
 gems:
-  - jekyll-feed
-  - jekyll-gist
-  - jekyll-paginate
   - jekyll-sitemap
   - jekyll-seo-tag
