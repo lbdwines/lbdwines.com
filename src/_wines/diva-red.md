@@ -6,7 +6,7 @@ ph:
 residual_sugar:
 alcohol:
 varietal_breakdown: tk
-image_path: /assets/images/wine.jpg
+image_path: /assets/images/diva-red.jpg
 sort_order: 8
 purchase_link: https://placehold.it/800/e8117f/ffffff/?text=wine+for+sale
 ---
