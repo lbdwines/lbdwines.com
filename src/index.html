@@ -2,11 +2,13 @@
 layout: default
 <!-- class: home -->
 top_image:
-  image_path: https://placehold.it/2030x1140/cccccc/cccccc?text=fpo
+  image_path: /assets/images/home-3.jpg
 favorites:
+  image_path: /assets/images/home-fav.jpg
+winemaker:
   image_path: https://placehold.it/822x1140/cccccc/cccccc?text=fpo
 middle_image:
-  image_path: https://placehold.it/2030x1140/cccccc/cccccc?text=fpo
+  image_path: /assets/images/home-2.jpg
 quote:
   image_path: https://placehold.it/477x405/cccccc/cccccc?text=fpo
 wines:
@@ -14,7 +16,7 @@ wines:
   - pinot-noir
   - cabernet-sauvignon
 bottom-image:
-  image_path: https://placehold.it/2030x1140/cccccc/cccccc?text=fpo
+  image_path: /assets/images/home-1.jpg
 ---
 
 
@@ -79,7 +81,7 @@ bottom-image:
 
 <section class="text-image winemaker">
   <div class="container">
-    <div class="image"><img id="makerImage" src="{{ page.favorites.image_path }}" alt=""></div>
+    <div class="image"><img id="makerImage" src="{{ page.winemaker.image_path }}" alt=""></div>
     <div class="text">
       <div class="wrapper">
         <h4>behind the scenes</h4>

@@ -55,11 +55,11 @@
 
     if (!readCookie(agecookie)) {
         jQuery(agemodal).fadeIn();
-        console.log('no cookie');
+        // console.log('no cookie');
     } else {
         jQuery(agemodal).hide();
         jQuery(modalContent).fadeIn();
-        console.log('cookie');
+        // console.log('cookie');
     }
 
     jQuery(formsubmit).on('click', function(event){
@@ -219,7 +219,7 @@
                       pad = (makerImageDivHeight - makerTextDivHeight) / 2;
                       makerTextDiv.css("padding-top", pad);
                     }
-                    console.log('resize about');
+                    // console.log('resize about');
                   }
                 }, 100);
               });

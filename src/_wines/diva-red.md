@@ -7,7 +7,7 @@ ph:
 residual_sugar:
 alcohol:
 varietal_breakdown: tk
-image_path: https://placehold.it/959x1214/cccccc/cccccc?text=fpo
+image_path: /assets/images/wine.jpg
 sort_order: 8
 purchase_link: https://placehold.it/800/e8117f/ffffff/?text=wine+for+sale
 ---
