@@ -163,7 +163,7 @@ footer {
   }
   background: #000000;
   font-family: AvenirLTStd-Book;
-  letter-spacing: 2px;
+  letter-spacing: 1px;
   color: white;
   @include media(min-width 100px max-width 1385px){
     @include pad(0 1rem);
@@ -176,7 +176,7 @@ footer {
         font-size: 12px;
         color: white;
         text-transform: uppercase;
-        letter-spacing: 2px;
+        letter-spacing: 1px;
         margin: 0px;
         margin-top: 2px;
         @include vertical-align;
@@ -190,7 +190,7 @@ footer {
         font-size: 10px;
         color: white;
         text-transform: uppercase;
-        letter-spacing: 2px;
+        letter-spacing: 1px;
         margin: 0px;
         margin-top: 2px;
         @include vertical-align;
@@ -217,7 +217,7 @@ footer {
           @include transition(all .2s ease);
           color: white;
           text-transform: uppercase;
-          letter-spacing: 2px;
+          letter-spacing: 1px;
           text-decoration: none;
           &:hover {
             @include transition(all .2s ease);
@@ -240,7 +240,7 @@ footer {
         a {
           color: white;
           text-transform: uppercase;
-          letter-spacing: 2px;
+          letter-spacing: 1px;
           text-decoration: none;
         }
       }

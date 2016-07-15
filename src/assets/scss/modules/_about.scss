@@ -87,6 +87,7 @@
         .wrapper {
           h3 {
             margin-top: 1rem;
+            margin-bottom: 6px;
           }
           h2 {
             font-size: 42px;
@@ -95,9 +96,9 @@
           }
           p {
             line-height: 1.7;
-            &:first-of-type {
-              margin-top: 2rem;
-            }
+            // &:first-of-type {
+            //   margin-top: 2rem;
+            // }
             // margin-bottom: 54px;
           }
         }
@@ -162,7 +163,6 @@
   section.bottom-image {
     @include media($s){
       margin-top: 108px;
-      margin-bottom: 108px;
     }
     @include media($l-up) {
       position: relative;

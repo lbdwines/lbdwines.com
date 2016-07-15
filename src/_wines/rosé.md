@@ -9,6 +9,7 @@ varietal_breakdown: 75% Pinot Grigio, 13% Muscat, 10% Chardonnay, 2% Viognier
 image_path: /assets/images/rose.jpg
 sort_order: 5
 purchase_link:
+slug: /wines/rose/
 ---
 
 Aromas of white peach, strawberry and subtle tropical fruit overlaying accents of crisp grapefruit and red apple.

@@ -164,7 +164,6 @@
   section.cta {
     @include media($s-up){
       margin-top: 18px;
-      margin-bottom: 108px;
       .buttons {
         @include transition(all .2s ease);
         text-align: center;

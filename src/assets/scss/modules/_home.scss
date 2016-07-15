@@ -114,13 +114,14 @@
           // opacity: 0;
           h3 {
             margin-top: .75rem;
+            margin-bottom: 6px;
           }
           p {
             line-height: 1.7;
           }
           button {
             @include transition(all .2s ease);
-            margin-top: .5rem;
+            margin-top: 18px;
             padding: 1.3em 1em;
             width: 230px;
             background-color: #eed5d8;
@@ -160,11 +161,12 @@
           .wrapper {
             h3 {
               margin-top: 1rem;
+              margin-bottom: 6px;
             }
             p {
               line-height: 1.7;
-              margin-top: 2rem;
-              margin-bottom: 54px;
+              // margin-top: 2rem;
+              // margin-bottom: 54px;
             }
             button {
               @include transition(all .2s ease);
@@ -199,7 +201,7 @@
             }
             button {
               @include transition(all .2s ease);
-              margin-top: .5rem;
+              margin-top: 18px;
               padding: 1.3em 1em;
               width: 230px;
               background-color: #eed5d8;
@@ -425,7 +427,6 @@
 
   section.bottom-image {
     @include media($s){
-      margin-bottom: 108px;
       margin-top: 108px;
     }
     @include media($l-up) {

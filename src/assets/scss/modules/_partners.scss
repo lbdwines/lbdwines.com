@@ -147,12 +147,10 @@
     .inquiry {
       @include media($s){
         margin-top: -14px;
-        margin-bottom: 108px;
       }
       @include media($l){
         @include span-columns(4);
         @include shift(4);
-        margin-bottom: 75px;
       }
       h2 {
         text-align: center;

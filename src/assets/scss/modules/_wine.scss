@@ -244,11 +244,20 @@
         padding-left: 2rem;
         padding-right: 2rem;
       }
+      @include media(668px){
+        text-align: center;
+        max-width: 65%;
+        margin-left: auto;
+        margin-right: auto;
+      }
       @include media($l){
         padding-left: 0px;
         padding-right: 0px;
         @include span-columns(4);
         margin-bottom: 90px;
+        &:nth-of-type(4) {
+          clear: left;
+        }
         &:nth-of-type(3n) {
           margin-right: 0;
         }
@@ -294,7 +303,6 @@
   section.cta {
     @include media($s-up){
       margin-top: 18px;
-      margin-bottom: 108px;
       .buttons {
         @include transition(all .2s ease);
         text-align: center;
