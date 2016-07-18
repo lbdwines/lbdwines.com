@@ -111,7 +111,7 @@
         .wrapper {
           @include span-columns(4 of 5);
           @include vertical-align;
-          // opacity: 0;
+          opacity: 0;
           h3 {
             margin-top: .75rem;
             margin-bottom: 6px;
@@ -121,7 +121,7 @@
           }
           button {
             @include transition(all .2s ease);
-            margin-top: 18px;
+            margin-top: 20px;
             padding: 1.3em 1em;
             width: 230px;
             background-color: #eed5d8;
@@ -159,6 +159,7 @@
           padding-left: 2.5rem;
           padding-right: 2.5rem;
           .wrapper {
+            opacity: 0;
             h3 {
               margin-top: 1rem;
               margin-bottom: 6px;
@@ -201,7 +202,7 @@
             }
             button {
               @include transition(all .2s ease);
-              margin-top: 18px;
+              margin-top: 20px;
               padding: 1.3em 1em;
               width: 230px;
               background-color: #eed5d8;
@@ -222,7 +223,7 @@
           .wrapper {
             animation: fadein 1s;
             // @include span-columns(3 of 4);
-            @include vertical-align;
+            // @include vertical-align;
             h3 {
               margin-top: .75rem;
             }
@@ -231,7 +232,7 @@
             }
             button {
               @include transition(all .2s ease);
-              margin-top: .5rem;
+              margin-top: 20px;
               padding: 1.3em 1em;
               width: 230px;
               background-color: #eed5d8;
