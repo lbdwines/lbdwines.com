@@ -34,6 +34,7 @@
     });
 
 
+
     // accordion
     $('.accordion').accordion({
       singleOpen: false
@@ -158,7 +159,7 @@
                 }, 100);
               });
 
-            // // WINES
+            //  WINES
             var wines = $('#wines');
             if(wines.length > 0)
               wines.imagesLoaded( function() {
