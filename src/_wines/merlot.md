@@ -8,7 +8,7 @@ alcohol: 13.5% A.B.V
 varietal_breakdown: 78% Merlot, 4% Petite Sirah, 18% Other Complimentary Red Varietals
 image_path: /assets/images/merlot.jpg
 sort_order: 4
-purchase_link: https://placehold.it/800/e8117f/ffffff/?text=wine+for+sale
+purchase_link:
 ---
 
 Plush texture and nuanced aromas of ripe black cherry, rich mocha and spicy plum before a seductive vanilla and oak finish.

@@ -8,7 +8,7 @@ alcohol: 8.0% A.B.V
 varietal_breakdown: 100% Muscat
 image_path: /assets/images/moscato.jpg
 sort_order: 7
-purchase_link: https://placehold.it/800/e8117f/ffffff/?text=wine+for+sale
+purchase_link:
 ---
 
 Exotic floral aromas mingling over layered notes of rose petal, lychee and white peach before a pleasantly sweet finish.

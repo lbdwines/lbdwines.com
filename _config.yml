@@ -88,6 +88,6 @@ limit_posts: 10
 # excerpt_separator: '<!--more-->'
 
 # Extending Jekyll
-gems:
+plugins:
   - jekyll-sitemap
   - jekyll-seo-tag
